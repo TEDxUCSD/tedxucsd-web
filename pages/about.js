@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Script from 'next/script'
 import Image from 'next/image'
-import NavbarWhite from '../components/NavbarWhite'
+import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import styled from 'styled-components'
 import { Parallax } from 'react-parallax'
@@ -36,7 +36,7 @@ export default function Home() {
                 <meta name="description" content="About Us" />
                 <link rel="icon" href="/favicon.png" />
             </Head>
-            <NavbarWhite />
+            <Navbar bg="white />
             <div style={{ marginTop: '80px', backgroundColor: 'white' }}>
                 <Parallax bgImage="Team.JPG" strength={400}>
                     <div style={{ height: '40vh' }}>
