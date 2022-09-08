@@ -3,15 +3,21 @@ import Link from 'next/link'
 import styled from 'styled-components'
 
 const Nav = styled.nav`
-    height: 80px;
-    background: #000;
-    color: #fff;
+    height: var(--nav-height);
+    background: var(--clr-ted-white);
+    font-family: var(--ff-secondary);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+    width: 100%;
 `
 const StyledLink = styled.a`
     padding: 0rem 2rem;
+    text-decoration: none;
+    color: var(--clr-ted-black);
     &:hover {
         color: #e62b1e;
     }
@@ -22,13 +28,12 @@ const Logo = styled.img`
     padding: 0rem 2rem;
 `
 
-
-const Navbar = () => {
+const NavbarWhite = () => {
     return (
         <Nav>
             <div>
                 <Link href="/" passHref>
-                    <a><Logo src="TEDxLogo.png"></Logo> </a>
+                    <a><Logo src="TEDxLogoWhite.png"></Logo> </a>
                 </Link>
             </div>
             <div>
@@ -41,7 +46,7 @@ const Navbar = () => {
                 <Link href="/" passHref>
                     <StyledLink>MEDIA</StyledLink>
                 </Link>
-                <Link href="/" passHref>
+                <Link href="/about" passHref>
                     <StyledLink>ABOUT</StyledLink>
                 </Link>
             </div>
@@ -49,4 +54,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default NavbarWhite

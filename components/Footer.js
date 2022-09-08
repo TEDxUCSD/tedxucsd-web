@@ -2,12 +2,14 @@ import styled from 'styled-components';
 import Link from 'next/link';
 
 const FooterSection = styled.div`
-    background: black;
-    color: #fff;
+    background: var(--clr-ted-black);
+    color: var(--clr-ted-white);
+    font-family: var(--ff-secondary);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex: 1;
 `;
 
 const SocialIcon = styled.a`
@@ -28,6 +30,8 @@ const FooterNav = styled.nav`
 
 const StyledLink = styled.a`
     margin: 0rem 2rem;
+    text-decoration: none;
+    color: var(--clr-ted-white);
     &:hover {
         color: #e62b1e;
     }
@@ -55,7 +59,7 @@ const Footer = () => {
                     <ion-icon src="linkedin.svg"></ion-icon>
                 </SocialIcon>
 
-                <SocialIcon href="https://www.youtube.com/user/TEDxTalks" target="_blank">
+                <SocialIcon href="https://www.youtube.com/channel/UCGHNsmAK-3zKEy8p58kz9iQ" target="_blank">
                     <ion-icon src="youtube.svg"></ion-icon>
                 </SocialIcon>
             </SocialMedia>
@@ -76,7 +80,7 @@ const Footer = () => {
                     <StyledLink>MEDIA</StyledLink>
                 </Link>
                 <p>|</p>
-                <Link href="/" passHref>
+                <Link href="/about" passHref>
                     <StyledLink>ABOUT</StyledLink>
                 </Link>
             </FooterNav>
