@@ -49,7 +49,7 @@ body {
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: var(--clr-ted-black);
+  background-color: var(--clr-ted-white);
 }
 
 p {

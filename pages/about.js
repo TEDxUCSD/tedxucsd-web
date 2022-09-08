@@ -36,7 +36,9 @@ export default function Home() {
                 <meta name="description" content="About Us" />
                 <link rel="icon" href="/favicon.png" />
             </Head>
-            <Navbar bg="white />
+
+            <Navbar bg="white" />
+
             <div style={{ marginTop: '80px', backgroundColor: 'white' }}>
                 <Parallax bgImage="Team.JPG" strength={400}>
                     <div style={{ height: '40vh' }}>
