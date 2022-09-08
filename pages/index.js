@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Script from 'next/script'
 import Image from 'next/image'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer';
-import styled from 'styled-components';
+import NavbarBlack from '../components/NavbarBlack'
+import NavbarWhite from '../components/NavbarWhite'
+import Footer from '../components/Footer'
+import styled from 'styled-components'
 
 const Hero = styled.div`
   height: 70vh;
@@ -28,11 +29,14 @@ export default function Home() {
         <meta name="description" content="Ideas worth sharing" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <Navbar />
-      <Hero>
-        <Banner src="TEDxHero.png" alt="Coming Soon" />
-      </Hero>
-      <Footer />
+      <NavbarBlack />
+      <div style={{ marginTop: '80px' }}>
+        <Hero>
+          <Banner src="TEDxHero.png" alt="Coming Soon" />
+        </Hero>
+        <Footer />
+      </div>
+
 
       {/* Icons */}
       <Script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></Script>
