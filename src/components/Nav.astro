@@ -1,0 +1,67 @@
+<script>
+	let btn = document.querySelector("#mobile-menu");
+	btn.addEventListener("click", () => {
+		let list = document.querySelector("ul");
+		btn.name === "menu"
+			? ((btn.name = "close"),
+			  list.classList.add("top-[64px]"),
+			  list.classList.add("opacity-100"))
+			: ((btn.name = "menu"),
+			  list.classList.remove("top-[64px]"),
+			  list.classList.remove("opacity-100"));
+	});
+</script>
+
+<header class='w-full bg-white flex justify-center shadow'>
+	<nav
+		class='bg-white md:flex md:items-center md:justify-between w-full max-w-7xl'
+	>
+		<div
+			class='p-3 flex justify-between items-center z-[100] relative bg-white h-full'
+		>
+			<button>
+				<img src='logo/logo-black.png' alt='TEDxUCSD Logo' class='h-10' />
+			</button>
+
+			<button
+				id='mobile-menu'
+				class='text-3xl cursor-pointer mx-2 md:hidden block'
+				name='menu'
+			>
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					fill='none'
+					viewBox='0 0 24 24'
+					stroke-width='1.5'
+					stroke='currentColor'
+					class='w-6 h-6'
+				>
+					<path
+						stroke-linecap='round'
+						stroke-linejoin='round'
+						d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'></path>
+				</svg>
+			</button>
+		</div>
+
+		<ul
+			class='md:flex md:items-center z-[10] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-300'
+		>
+			<li class='mx-4 my-5 md:my-0'>
+				<a href='#' class='hover:text-ted-red duration-300'>WORDPLAY</a>
+			</li>
+			<li class='mx-4 my-5 md:my-0'>
+				<a href='#' class='hover:text-ted-red duration-300'>SPEAKERS</a>
+			</li>
+			<li class='mx-4 my-5 md:my-0'>
+				<a href='#' class='hover:text-ted-red duration-300'>EVENTS</a>
+			</li>
+			<li class='mx-4 my-5 md:my-0'>
+				<a href='#' class='hover:text-ted-red duration-300'>MEDIA</a>
+			</li>
+			<li class='mx-4 my-5 md:my-0'>
+				<a href='#' class='hover:text-ted-red duration-300'>ABOUT</a>
+			</li>
+		</ul>
+	</nav>
+</header>
