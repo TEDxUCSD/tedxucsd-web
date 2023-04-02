@@ -1,0 +1,53 @@
+---
+import Hero from "../components/Hero.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title='Wordplay'>
+	<main class='bg-[#F5CFBB] min-h-[calc(100vh-74px)]'>
+		<Hero />
+
+		<div class='md:max-w-5xl m-auto text-center py-8'>
+			<h1 class='text-4xl'>2023 Main Conference</h1>
+			<h1 class='text-2xl italic text-gray-700 font-light'>
+				More details coming soon...
+			</h1>
+			<div id='timer' class='flex justify-center py-10'>
+				<div class='basis-[100px]'>
+					<p id='days' class='text-6xl'>00</p>
+					<span>Days</span>
+				</div>
+				<div class='basis-[100px]'>
+					<p id='hours' class='text-6xl'>00</p>
+					<span>Hours</span>
+				</div>
+				<div class='basis-[100px]'>
+					<p id='minutes' class='text-6xl'>00</p>
+					<span>Minutes</span>
+				</div>
+				<div class='basis-[100px]'>
+					<p id='seconds' class='text-6xl'>00</p>
+					<span>Seconds</span>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script>
+		let date = new Date("May 20, 2023 00:00:00").getTime();
+		let x = setInterval(() => {
+			let now = new Date().getTime();
+			let delta = date - now;
+			let days = Math.floor(delta / (1000 * 60 * 60 * 24));
+			let hours = Math.floor(
+				(delta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+			);
+			let minutes = Math.floor((delta % (1000 * 60 * 60)) / (1000 * 60));
+			let seconds = Math.floor((delta % (1000 * 60)) / 1000);
+
+			document.getElementById("days").innerHTML = days;
+			document.getElementById("hours").innerHTML = hours;
+			document.getElementById("minutes").innerHTML = minutes;
+			document.getElementById("seconds").innerHTML = seconds;
+		}, 1000);
+	</script>
+</Layout>
