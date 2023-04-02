@@ -1,0 +1,87 @@
+---
+import Banner from "../../components/Banner.astro";
+import FeaturedTalk from "../../components/FeaturedTalk.astro";
+import Title from "../../components/Title.astro";
+import Layout from "../../layouts/Layout.astro";
+import "@fontsource/playfair-display";
+import "@fontsource/playfair-display/700.css";
+import "@fontsource/playfair-display/700-italic.css";
+---
+
+<Layout title='Sixth Sense'>
+	<Title
+		date='May 23, 2020'
+		title='Rebooted'
+		loc='Online Conference'
+		url='/events/2020/banner.png'
+	/>
+	<section class='bg-white px-6 w-full pb-4'>
+		<div class='md:max-w-5xl m-auto'>
+			<h2 class='text-3xl font-light mb-8 hidden md:block md:pt-8 md:mb-4'>
+				Description
+			</h2>
+			<p class='text-gray-600 py-3'>
+				This year's theme is “Rebooted.” It's a reminder to break from simply
+				going through the motions and breathe. We often don't know where we're
+				going until we've reflected on where we've been, and sometimes the
+				shapes of our stories only emerge after we allow ourselves to step back
+				and refresh. A reboot, therefore, is a chance for us to disconnect from
+				the noise of mindless movement to rediscover what truly matters to us.
+			</p>
+		</div>
+	</section>
+	<FeaturedTalk
+		fname='Victor'
+		lname='Ochoa'
+		title='Chicanosauruz at the Border'
+		desc="Victor's talk reflects a parallel of his life as a Chicano that has been dealing with the issues in the most traveled border in the world. From his childhood to the present, immigration has been a four generations situation with Victor, his family, and community. The civil rights movements of the 60's and 70's were instrumental in influencing his art and activism, making him feel like a surfer riding a tsunami. After more than 50 years of work, Victor is feeling the same energy of creativity to produce murals and work that battle those Chicano issues."
+		link='https://www.youtube.com/watch?v=QOrwlhhlAsM'
+		color='gray'
+		left
+	/>
+	<FeaturedTalk
+		fname='Elizabeth'
+		lname='Salaam'
+		title='The scariest thing that can change your life'
+		desc='When writer and artist Elizabeth Salaam was eight, she told an adult that her father had been sexually abusing her for years. Today, she looks back on the experience of speaking up as the first big risk of her life and describes how she draws upon the courage she had as a child to take risks and show up as her most authentic self. In this deeply personal talk, Salaam explores the power of strategic risk-taking, its relationship to art and authenticity, and how we can use it to get deep satisfaction from our lives.'
+		link='https://www.youtube.com/watch?v=E5pyGmtSNUE'
+		color='white'
+		right
+	/>
+	<FeaturedTalk
+		fname='Amin'
+		lname='Shaykho'
+		title='Working hard is my biggest mistake'
+		desc='Amin Shaykho admits that his biggest mistake is working hard. After years of hard work and success, graduating university two years early while leading a company that aims to change the way students learn, everything went downhill. He credits the “creativity walk” for his recovery and shares how it allowed him to rediscover himself during the toughest period of his journey.'
+		link='https://www.youtube.com/watch?v=2VwRO7KipLM'
+		color='gray'
+		left
+	/>
+	<FeaturedTalk
+		fname='Hannah'
+		lname='Martin'
+		title='Latinas and the New American Dream'
+		desc="In recent years the rate of Latina-owned business ownership has increased more than any other marginalized group. What makes Latina women start their own businesses? Where are our strengths and what resources do we need that we're not getting? This talk will incorporate facts about the current status of entrepreneurship, personal anecdotes, and the stories of Latina entrepreneurs to share how they were inspired to think outside traditional roles to reboot their lives by starting their own businesses."
+		link='https://www.youtube.com/watch?v=4UMzEORCdHY'
+		color='white'
+		right
+	/>
+	<FeaturedTalk
+		fname='Richard'
+		lname='Shuster'
+		title='Becoming a Superhero: The Science and Power of Altruism'
+		desc='Dr. Shuster unpacks his journey after a near-fatal car accident that broke his spine and nearly tore every ligament in his neck. Surviving helped him discover his true purpose — helping others. He focuses on the neuroscience of altruism and how we can shift away from a society focused on selfies to the neurological benefits of helping others.'
+		link='https://www.youtube.com/watch?v=t4i3WAfJLRM'
+		color='gray'
+		left
+	/>
+	<FeaturedTalk
+		fname='Rose'
+		lname='Schindler'
+		title='Surviving Auschwitz, you had to have guts'
+		desc='Rose Schindler was born and raised in Seredne, Czechoslovakia. Rose was deported to Auschwitz II-Birkenau along with her parents, aunt, five sisters and two brothers when she was just 14 years old. This is the personal story of Rose surviving the Holocaust, starting a new life, ultimately finding love, joy and her life’s purpose.'
+		link='https://www.youtube.com/watch?v=hpyH130ZOTk'
+		color='white'
+		right
+	/>
+</Layout>

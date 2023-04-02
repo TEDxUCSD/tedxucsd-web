@@ -1,0 +1,89 @@
+---
+import Banner from "../../components/Banner.astro";
+import FeaturedTalk from "../../components/FeaturedTalk.astro";
+import Title from "../../components/Title.astro";
+import Layout from "../../layouts/Layout.astro";
+import "@fontsource/playfair-display";
+import "@fontsource/playfair-display/700.css";
+import "@fontsource/playfair-display/700-italic.css";
+---
+
+<Layout title='Sixth Sense'>
+	<Title
+		date='May 14, 2022'
+		title='Sixth Sense'
+		loc='Online Conference'
+		url='/events/2022/banner.png'
+	/>
+	<section class='bg-white px-6 w-full pb-4'>
+		<div class='md:max-w-5xl m-auto'>
+			<h2 class='text-3xl font-light mb-8 hidden md:block md:pt-8 md:mb-4'>
+				Description
+			</h2>
+			<p class='text-gray-600 py-3'>
+				<em>"Sixth Sense"</em> is born from wonder, stemming from the seesaw between
+				the questions we have and the answers we seek about our world. In that dance,
+				as we trace through our senses to make meaning from matter and turn particle
+				to perception, we may find ourselves compelled to break the mold. We may
+				seek to stray beyond the scope of the sensations we can (or cannot) experience,
+				and let our individual intuitions step into light. A ‘sixth sense’ is something
+				mysterious yet assuring; it gives us the resolve to walk in the world we
+				see, and the one we want to create.
+			</p>
+			<p class='text-gray-600 py-3'>
+				How we intake the information of the world is similar, but the
+				culmination of each of our senses creates something completely and
+				beautifully unique. What do you make of what you sense? How do you
+				transform particle to perception?
+			</p>
+			<p class='text-gray-600 py-3'>
+				Your sixth sense is now tingling–what do you say we follow it?
+			</p>
+		</div>
+	</section>
+	<FeaturedTalk
+		fname='Erik'
+		lname='Jepsen'
+		title='Picture Power'
+		desc='We’ve all heard that a picture is worth a thousand words, but how does this shape our understanding of the world around us? University photographer Erik Jepsen explores the concept of using photography as a tool to convey messages, and discusses how visual media can accomplish this when verbal media may fall short.'
+		link='https://www.youtube.com/watch?v=WZFVVOMqIY8'
+		color='gray'
+		left
+	/>
+	<FeaturedTalk
+		fname='Jacob'
+		lname='Geller'
+		title='How Virtual Spaces Can Influence Our Understanding of Real Ones'
+		desc='Spatial design is an often overlooked aspect of video games that has a profound, albeit subtle, impact on the way players engage with the game. But how does this same concept apply to real life? Jacob Geller discusses how the design of the spaces we frequent affects our behavior, both in ways we can anticipate, and those we often fail to'
+		link='https://www.youtube.com/watch?v=5nVj17UdAVY'
+		color='white'
+		right
+	/>
+	<FeaturedTalk
+		fname='Alison'
+		lname='Teal'
+		title='The Most Important Thing to Pack on Life’s Adventures'
+		desc='Watch TIME magazine’s “Female Indiana Jones” talk about how a simple SMILE has catapulted her towards being an explorer, author, surfer, conservationist and award wining ﬁlmmaker. Alison Teal has traveled the world with her pink surfboard and a smile, to inspire and entertain the kid - and explorer - in everyone.'
+		link='https://www.youtube.com/watch?v=E09z_LrrPmw'
+		color='gray'
+		left
+	/>
+	<FeaturedTalk
+		fname='Adrian'
+		lname='Wiggins'
+		title='The 4 Keys to Leading High Functioning Teams'
+		desc='Adrian Michael Wiggins, former Ole’ Miss and Fresno State’s Woman’s Basketball Coach, currently head boys’ basketball coach at Clovis East High School shares his 4 secrets to leadership.'
+		link='https://www.youtube.com/watch?v=dL9OuR2fo_I'
+		color='white'
+		right
+	/>
+	<FeaturedTalk
+		fname='Meeta'
+		lname='Joshi'
+		title='Should We Be Networking for the Soul?'
+		desc='The importance of networking comes up time and time again in our careers,  but it is easier said than done. Former television producer, Interfaith speaker and coach Meeta Joshi discusses how a spiritual mindset can enrich the connections we make with others.'
+		link='https://www.youtube.com/watch?v=PbtC2_-nXJk'
+		color='gray'
+		left
+	/>
+</Layout>

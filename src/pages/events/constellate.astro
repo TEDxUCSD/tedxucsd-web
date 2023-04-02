@@ -1,0 +1,103 @@
+---
+import Banner from "../../components/Banner.astro";
+import FeaturedTalk from "../../components/FeaturedTalk.astro";
+import Title from "../../components/Title.astro";
+import Layout from "../../layouts/Layout.astro";
+import "@fontsource/playfair-display";
+import "@fontsource/playfair-display/700.css";
+import "@fontsource/playfair-display/700-italic.css";
+---
+
+<Layout title='Sixth Sense'>
+	<Title
+		date='May 15, 2021'
+		title='Constellate'
+		loc='Online Conference'
+		url='/events/2021/banner.png'
+	/>
+	<section class='bg-white px-6 w-full pb-4'>
+		<div class='md:max-w-5xl m-auto'>
+			<h2 class='text-3xl font-light mb-8 hidden md:block md:pt-8 md:mb-4'>
+				Description
+			</h2>
+			<p class='text-gray-600 py-3'>
+				As we grow up, we begin to apply a logic-heavy filter on our dreams. We
+				begin to cap ourselves, sell ourselves short, and compare ourselves to
+				others in exchange for stability, status, and more. Yet our hearts still
+				yearn for more, but with this filtered-perspective, we are ultimately
+				left feeling hopeless.
+			</p>
+			<p class='text-gray-600 py-3'>
+				<em>"Constellate"</em> returns us to a world of child-like wonder, a time
+				when the questions we asked were beyond ourselves–a time when we were so
+				furiously curious of the immense space called the Unknown.
+			</p>
+			<p class='text-gray-600 py-3'>
+				<em>"Constellate"</em> reminds us that we can only connect the dots as we
+				go. When we embrace the fact that we each play a unique part in a bigger
+				story, then one day, we will together be in awe and peace when we step back
+				and see how our paths have gathered us together and intertwined to form an
+				intricate constellation far more beautiful and magnificent than we could
+				have ever imagined.
+			</p>
+			<p class='text-gray-600 py-3'>
+				So what do you say? Are you ready to traverse through a world of
+				child-like wonder with us?
+			</p>
+		</div>
+	</section>
+	<FeaturedTalk
+		fname='Jason'
+		lname='Licker'
+		title='How to Create Your Own Recipe for Success'
+		desc='Jason uses his cross-culture culinary experiences to demonstrate the power held inside each of us to create our own recipes for success. Jason shows how his greatest loss ultimately led to discovering his passion and how he harnessed grief into exploration. From moving to Shanghai as a pastry chef, to becoming an award-winning cookbook author, to winning Iron Chef Thailand, Jason hopes that his experiences can serve as a guidebook for those in pursuit of living life as boldly and unapologetically as possible.'
+		link='https://www.youtube.com/watch?v=TniMUOPcNtw'
+		color='gray'
+		left
+	/>
+	<FeaturedTalk
+		fname='Katherine'
+		lname='Gray'
+		title='Blown Away by Glass'
+		desc='Artist and professor Katherine Gray recounts her inauspicious beginnings as an artist and educator. After receiving an unexpected and exciting opportunity, her career changed overnight. Through sharing her journey and experiences, she illustrates that one should never remain content that they’ve reached the peak of their career as they can never fully know their own potential. '
+		link='https://www.youtube.com/watch?v=FuiC7V5fxQE'
+		color='white'
+		right
+	/>
+	<FeaturedTalk
+		fname='Mayuko'
+		lname='Inoue'
+		title='How to Figure Out Who You Are as an Asian American'
+		desc="Mayuko shares her experience growing up as Japanese American and the lessons learned throughout. From challenges of growing up as a minority, to finding purpose and fulfillment in her Software Engineering career, her mental health journey, and ultimately to her creating content on Youtube. In crafting together the different pieces of her life, she'll share what she's learned to helped her define and own her own identity"
+		link='https://www.youtube.com/watch?v=v0yrY72n3tY'
+		color='gray'
+		left
+	/>
+	<FeaturedTalk
+		fname='Neftali'
+		lname='Camacho'
+		title='How We Can Transform Our Fear of Reptiles into Curiosity'
+		desc="Neftali Camacho challenges our often fear-based perception of reptiles and explains the backstories of why many of us have negative associations with these animals. From the names humans have given reptiles to our portrayal of them in the media, Neftali pulls back the curtain, making us reevaluate respect for these creatures. Neftali's mission is to help us turn our fear into curiosity."
+		link='https://www.youtube.com/watch?v=enojm2MXnIk'
+		color='white'
+		right
+	/>
+	<FeaturedTalk
+		fname='Leon'
+		lname='Logothetis'
+		title='The Secret To Feeling Less Alone'
+		desc='Author and TV Host Leon Logothetis makes an insightful and profound case about the power of feeling less alone through one simple act. Leon has documented his experience circumnavigating the world with no money in his popular Netflix show "The Kindness Diaries". This experience has informed Leon’s worldview, and taught him exactly how powerful connecting to our humanity truly is.'
+		link='https://www.youtube.com/watch?v=Z2HI0KZpTxg'
+		color='gray'
+		left
+	/>
+	<FeaturedTalk
+		fname='Eric'
+		lname='Sullivan'
+		title="There's More to Sports than Winning and Losing"
+		desc='Eric outlines his experience as a youth sports coach and the transformational nature of this experience. Through observing and interacting with the kids on his teams, Eric has discovered a new perspective, learning valuable lessons which have completely and permanently altered his way of thinking about virtually every aspect of life.'
+		link='https://www.youtube.com/watch?v=cRXAfAksqa8'
+		color='white'
+		right
+	/>
+</Layout>
