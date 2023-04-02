@@ -1,9 +1,9 @@
 ---
-const { date, title, url, loc } = Astro.props;
+const { date, title, bg, loc } = Astro.props;
 ---
 
 <div
-	class={`w-full h-[25vh] md:h-[20rem] py-4 px-6 bg-[url('${url}')] bg-cover bg-right flex shrink-0 align-bottom`}
+	class={`w-full h-[12rem] md:h-[20rem] py-4 px-6 ${bg} bg-cover bg-right flex shrink-0 align-bottom`}
 >
 	<!-- <img class='overflow-clip object-cover w-full h-full' src={url} alt='' /> -->
 	<div class='w-[64rem] mx-auto mt-auto hidden md:block'>
