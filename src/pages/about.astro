@@ -1,0 +1,38 @@
+---
+import Banner from "../components/Banner.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title='About Us'>
+	<Banner url='/about.png' />
+	<section class='bg-white py-8 px-6 w-full'>
+		<div
+			class='md:max-w-5xl m-auto grid gap-4 grid-cols-1 md:grid-cols-5 items-center'
+		>
+			<div class='col-span-3'>
+				<h1 class='text-3xl font-light'>About TEDxUCSD</h1>
+				<p class='pt-8 pb-4 text-gray-700'>
+					TED is an annual event where the world’s leading thinkers and doers
+					are invited to share their passions. “TED” stands for Technology,
+					Entertainment, Design - three broad subject areas that are shaping our
+					future.
+				</p>
+				<p class='text-gray-700'>
+					TEDxUCSD’s mission is to bring together leading thinkers and doers to
+					share ideas that matter in and to any discipline - technology,
+					entertainment, design, science, humanities, business, development, and
+					much more. Through a local forum, we hope to inspire people to change
+					their lives, their futures, and ultimately their world.
+				</p>
+			</div>
+			<div class='col-span-2'>
+				<img src='fun.jpg' alt='TEDxUCSD members having fun' />
+			</div>
+		</div>
+	</section>
+	<section class='bg-white py-8 px-6 w-full'>
+		<div class='md:max-w-5xl m-auto'>
+			<h2 class='text-3xl font-light'>Meet The Team</h2>
+		</div>
+	</section>
+</Layout>
