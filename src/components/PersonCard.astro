@@ -1,0 +1,29 @@
+---
+const { img, name, link, text } = Astro.props;
+---
+
+{
+	link && (
+		<a href={link}>
+			<div class='h-[300px] w-[300px]'>
+				<img src={img} alt={name} />
+			</div>
+			<h2 class='uppercase'>{name}</h2>
+			<h3>{text}</h3>
+		</a>
+	)
+}
+
+{
+	!link && (
+		<div class='w-full pb-2'>
+			<div class='w-full aspect-square'>
+				<img class='object-cover' src={img} alt={name} />
+			</div>
+			<h2 class='uppercase font-semibold font-roboto text-[1.3rem] pt-2'>
+				{name}
+			</h2>
+			<h2 class='text-ted-red font-semibold -mt-1'>{text}</h2>
+		</div>
+	)
+}

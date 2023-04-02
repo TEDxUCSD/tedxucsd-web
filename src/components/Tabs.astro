@@ -1,0 +1,55 @@
+<div class='tabs'>
+	<input class='tabs-radio' type='radio' name='speakers' id='2022' checked />
+	<label class='tabs-label' for='2022'>2022</label>
+	<div class='tabs-content'>2022 CONTENT</div>
+
+	<input class='tabs-radio' type='radio' name='speakers' id='2021' />
+	<label class='tabs-label' for='2021'>2021</label>
+	<div class='tabs-content'>2021 CONTENT</div>
+
+	<input class='tabs-radio' type='radio' name='speakers' id='2020' />
+	<label class='tabs-label' for='2020'>2020</label>
+	<div class='tabs-content'>2020 CONTENT</div>
+
+	<input class='tabs-radio' type='radio' name='speakers' id='2019' />
+	<label class='tabs-label' for='2019'>2019</label>
+	<div class='tabs-content'>2019 CONTENT</div>
+</div>
+
+<style>
+	.tabs {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.tabs-label {
+		padding-inline: 8px;
+		cursor: pointer;
+		color: gray;
+	}
+
+	.tabs-label:hover {
+		background-color: #f5f5f5;
+		border-bottom: 2px solid #eb002739;
+	}
+
+	.tabs-radio {
+		display: none;
+	}
+
+	.tabs-radio:checked + .tabs-label {
+		font-weight: bold;
+		color: black;
+		border-bottom: 2px solid #eb0028;
+	}
+
+	.tabs-radio:checked + .tabs-label + .tabs-content {
+		display: initial;
+	}
+
+	.tabs-content {
+		order: 1;
+		width: 100%;
+		display: none;
+	}
+</style>
