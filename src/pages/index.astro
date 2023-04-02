@@ -1,11 +1,80 @@
 ---
+import FeaturedTalk from "../components/FeaturedTalk.astro";
+import Hero from "../components/Hero.astro";
 import Nav from "../components/Nav.astro";
 import Layout from "../layouts/Layout.astro";
+import "@fontsource/playfair-display";
+import "@fontsource/playfair-display/700.css";
+import "@fontsource/playfair-display/700-italic.css";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title='TEDxUCSD'>
 	<Nav />
 	<main class=''>
-		<h1>Astro</h1>
+		<Hero />
+		<section class='bg-white py-8 px-6 w-full'>
+			<div
+				class='md:max-w-5xl m-auto grid grid-cols-1 md:grid-cols-2 items-center'
+			>
+				<div>
+					<h2 class='text-2xl font-medium text-gray-500 italic'>
+						TEDxUCSD Presents:
+					</h2>
+					<h1 class='text-3xl font-semibold text-ted-red'>WORDPLAY</h1>
+					<h3 class='text-gray-600'>May 20, 2023</h3>
+				</div>
+				<div>
+					<p class='py-8 text-gray-700'>
+						<span class='italic'>"Wordplay"</span> is an examination of the diverse
+						forms of expression that are used to convey emotions, drive change, and
+						express ideas. The presence, or lack thereof, of words has the power
+						to influence our minds and expose our vulnerabilities. Words can be used
+						to unite us, but also have the ability to manipulate and create barriers
+						within each other. <span class='italic'>"Wordplay"</span> encompasses
+						the freedom of expression, the possibility within different forms of
+						communication, and the nuances of meaning.
+					</p>
+					<a class='bg-ted-red text-white p-3' href='/events/wordplay'
+						>Learn More</a
+					>
+				</div>
+			</div>
+		</section>
+		<h2 class='font-serif mt-12 text-center text-4xl text-gray-700'>
+			Featured Talks
+		</h2>
+		<FeaturedTalk
+			fname='Christine'
+			lname='Ha'
+			title='How the Blind See the World'
+			desc='Christine Ha talks about her personal experiences being blind and how it shaped her perspective on how people treat the disabled.  She sheds light on how many of the things we take for granted everyday are not always so accommodating to others who deal with disabilities. '
+			link='https://www.youtube.com/watch?v=tWmjHn6mfjc'
+			color='white'
+		/>
+		<FeaturedTalk
+			fname='Mayuko'
+			lname='Inoue'
+			title='How to Figure Out Who You Are as an Asian American'
+			desc="Mayuko shares her experience growing up as Japanese American and the lessons learned throughout. From challenges of growing up as a minority, to finding purpose and fulfillment in her Software Engineering career, her mental health journey, and ultimately to her creating content on Youtube. In crafting together the different pieces of her life, she'll share what she's learned to helped her define and own her own identity"
+			link='https://www.youtube.com/watch?v=v0yrY72n3tY'
+			color='gray'
+		/>
+		<FeaturedTalk
+			fname='Robert'
+			lname='Kiyosaki'
+			title='Why the Rich are Getting Richer'
+			desc='Robert Kiyosaki is an entrepreneur and the author of “Rich Dad Poor Dad”, the #1 bestselling personal finance book of all time.  In his talk, he discusses the power of financial education and how it relates to income inequality'
+			link='https://www.youtube.com/watch?v=abMQhaMdQu0'
+			color='white'
+		/>
+		<FeaturedTalk
+			fname='Jacob'
+			lname='Geller'
+			title='How Virtual Spaces Can Influence Our Understanding of Real Ones'
+			desc='Spatial design is an often overlooked aspect of video games that has a profound, albeit subtle, impact on the way players engage with the game. But how does this same concept apply to real life? Jacob Geller discusses how the design of the spaces we frequent affects our behavior, both in ways we can anticipate, and those we often fail to'
+			link='https://www.youtube.com/watch?v=5nVj17UdAVY'
+			color='gray'
+		/>
 	</main>
 </Layout>
