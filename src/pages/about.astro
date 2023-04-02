@@ -1,5 +1,6 @@
 ---
 import Banner from "../components/Banner.astro";
+import PersonCard from "../components/PersonCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -32,7 +33,89 @@ import Layout from "../layouts/Layout.astro";
 	</section>
 	<section class='bg-white py-8 px-6 w-full'>
 		<div class='md:max-w-5xl m-auto'>
-			<h2 class='text-3xl font-light'>Meet The Team</h2>
+			<h2 class='text-3xl font-light pb-8'>Meet The Team</h2>
+			<div class='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 w-full gap-4'>
+				<PersonCard
+					name='Annabelle Teoh'
+					text='Co-Director'
+					img='/team/base.png'
+				/>
+				<PersonCard name='Nicole Hui' text='Co-Director' img='/team/base.png' />
+				<PersonCard
+					name='Charlotte Hou'
+					text='Speakers Relations'
+					img='/team/base.png'
+				/>
+				<PersonCard
+					name='Kathleen Shiroma'
+					text='Speakers Relations'
+					img='/team/base.png'
+				/>
+				<PersonCard
+					name='Ishan Vaish'
+					text='Speakers Relations'
+					img='/team/base.png'
+				/>
+				<PersonCard
+					name='Armin Suraj'
+					text='Experience Design'
+					img='/team/base.png'
+				/>
+				<PersonCard
+					name='Hannah Chau'
+					text='Experience Design'
+					img='/team/base.png'
+				/>
+				<PersonCard
+					name='Samantha Ta'
+					text='Experience Design'
+					img='/team/base.png'
+				/>
+				<PersonCard
+					name='Tienna Chen'
+					text='Experience Design'
+					img='/team/base.png'
+				/>
+				<PersonCard name='Natalie Glezen' text='Finance' img='/team/base.png' />
+				<PersonCard name='Phebe Chang' text='Finance' img='/team/base.png' />
+				<PersonCard
+					name='Diane Ji'
+					text='Internal Affairs'
+					img='/team/base.png'
+				/>
+				<PersonCard
+					name='Saransh Puri'
+					text='Internal Affairs'
+					img='/team/base.png'
+				/>
+				<PersonCard
+					name='Grace Chun'
+					text='External Affairs'
+					img='/team/base.png'
+				/>
+				<PersonCard
+					name='Irum Aamer'
+					text='External Affairs'
+					img='/team/base.png'
+				/>
+				<PersonCard
+					name='Shreya Sharma'
+					text='External Affairs'
+					img='/team/base.png'
+				/>
+				<PersonCard name='Aimee Zhang' text='Design' img='/team/base.png' />
+				<PersonCard name='Alice Lam' text='Design' img='/team/base.png' />
+				<PersonCard
+					name='Aska Kunita Demirci'
+					text='Design'
+					img='/team/base.png'
+				/>
+				<PersonCard name='Brianne Jung' text='Marketing' img='/team/base.png' />
+				<PersonCard name='Joyce Qi' text='Marketing' img='/team/base.png' />
+				<PersonCard name='Matthew Chen' text='Marketing' img='/team/base.png' />
+				<PersonCard name='Chloe Sun' text='Media' img='/team/base.png' />
+				<PersonCard name='Trung Pham' text='Media' img='/team/base.png' />
+			</div>
 		</div>
 	</section>
 </Layout>

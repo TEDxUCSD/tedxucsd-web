@@ -1,0 +1,16 @@
+---
+import Banner from "../components/Banner.astro";
+import EventCard from "../components/EventCard.astro";
+import Tabs from "../components/Tabs.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title='Events'>
+	<Banner url='/events.png' />
+	<section class='bg-white py-8 px-6 w-full'>
+		<div class='md:max-w-5xl m-auto'>
+			<h2 class='text-3xl font-light mb-8'>Speakers</h2>
+			<Tabs />
+		</div>
+	</section>
+</Layout>
