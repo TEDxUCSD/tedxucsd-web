@@ -1,7 +1,8 @@
 ---
 import { YouTube } from "@astro-community/astro-embed-youtube";
 
-const { fname, lname, title, desc, link, color, left, right } = Astro.props;
+const { fname, lname, title, desc, link, color, poster, left, right } =
+	Astro.props;
 
 let bg = color == "white" ? "bg-white" : "bg-gray-100";
 ---
@@ -19,7 +20,7 @@ let bg = color == "white" ? "bg-white" : "bg-gray-100";
 					<p class='font-light text-gray-400 leading-7 mb-4 md:mb-0'>{desc}</p>
 				</div>
 				<div class='col-span-2'>
-					<YouTube id={link} playlabel='' />
+					<YouTube id={link} playlabel='' poster={poster} />
 				</div>
 			</div>
 		)
@@ -28,7 +29,7 @@ let bg = color == "white" ? "bg-white" : "bg-gray-100";
 		right && (
 			<div class='py-16 md:max-w-5xl m-auto grid gap-4 grid-cols-1 md:grid-cols-3 items-center text-center md:text-right'>
 				<div class='col-span-2 row-start-2 md:row-start-1'>
-					<YouTube id={link} playlabel='' />
+					<YouTube id={link} playlabel='' poster={poster} />
 				</div>
 				<div class=''>
 					<h3 class='font-light text-gray-400 uppercase'>{title}</h3>
