@@ -1,19 +1,191 @@
+---
+import PersonCard from "./PersonCard.astro";
+---
+
 <div class='tabs'>
 	<input class='tabs-radio' type='radio' name='speakers' id='2022' checked />
 	<label class='tabs-label' for='2022'>2022</label>
-	<div class='tabs-content'>2022 CONTENT</div>
+	<div class='tabs-content'>
+		<div class='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 w-full gap-4'>
+			<PersonCard
+				name='Erik Jepsen'
+				text='Photographer'
+				img='/event-img/2022/speakers/erik.webp'
+				link='https://www.youtube.com/watch?v=WZFVVOMqIY8'
+			/>
+			<PersonCard
+				name='Jacob Geller'
+				text='Writer'
+				img='/event-img/2022/speakers/jacob.webp'
+				link='https://www.youtube.com/watch?v=5nVj17UdAVY'
+			/>
+			<PersonCard
+				name='Allison Teal'
+				text='Filmmaker and Conservationist'
+				img='/event-img/2022/speakers/allison.png'
+				link='https://www.youtube.com/watch?v=E09z_LrrPmw'
+			/>
+			<PersonCard
+				name='Adrian Wiggins'
+				text='Basketball Coach'
+				img='/event-img/2022/speakers/adrian.webp'
+				link='https://www.youtube.com/watch?v=dL9OuR2fo_I'
+			/>
+			<PersonCard
+				name='Meeta Joshi'
+				text='Project Consultant'
+				img='/event-img/2022/speakers/meeta.webp'
+				link='https://www.youtube.com/watch?v=PbtC2_-nXJk'
+			/>
+		</div>
+	</div>
 
 	<input class='tabs-radio' type='radio' name='speakers' id='2021' />
 	<label class='tabs-label' for='2021'>2021</label>
-	<div class='tabs-content'>2021 CONTENT</div>
+	<div class='tabs-content'>
+		<div class='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 w-full gap-4'>
+			<PersonCard
+				name='Jason Licker'
+				text='Pastry Chef'
+				img='/event-img/2021/speakers/jason.webp'
+				link='https://www.youtube.com/watch?v=TniMUOPcNtw'
+			/>
+			<PersonCard
+				name='Katherine Gray'
+				text='Glass Artist'
+				img='/event-img/2021/speakers/kath.jpg'
+				link='https://www.youtube.com/watch?v=FuiC7V5fxQE'
+			/>
+			<PersonCard
+				name='Mayuko Inoue'
+				text='Content Creator'
+				img='/event-img/2021/speakers/mayuko.webp'
+				link='https://www.youtube.com/watch?v=v0yrY72n3tY'
+			/>
+			<PersonCard
+				name='Neftali Camacho'
+				text='Reptile Conservationist'
+				img='/event-img/2021/speakers/naf.jpg'
+				link='https://www.youtube.com/watch?v=enojm2MXnIk'
+			/>
+			<PersonCard
+				name='Leon Logothetis'
+				text='Traveler'
+				img='/event-img/2021/speakers/leon.jpg'
+				link='https://www.youtube.com/watch?v=Z2HI0KZpTxg'
+			/>
+			<PersonCard
+				name='Eric Sullivan'
+				text='Sports Director, YMCA'
+				img='/event-img/2021/speakers/eric.jpeg'
+				link='https://www.youtube.com/watch?v=cRXAfAksqa8'
+			/>
+		</div>
+	</div>
 
 	<input class='tabs-radio' type='radio' name='speakers' id='2020' />
 	<label class='tabs-label' for='2020'>2020</label>
-	<div class='tabs-content'>2020 CONTENT</div>
+	<div class='tabs-content'>
+		<div class='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 w-full gap-4'>
+			<PersonCard
+				name='Victor Ochoa'
+				text='Artist'
+				img='/event-img/2020/speakers/victor.jpg'
+				link='https://www.youtube.com/watch?v=QOrwlhhlAsM'
+			/>
+			<PersonCard
+				name='Elizabeth Salaam'
+				text='Writer and Artist'
+				img='/event-img/2020/speakers/liz.jpg'
+				link='https://www.youtube.com/watch?v=E5pyGmtSNUE'
+			/>
+			<PersonCard
+				name='Amin Shaykho'
+				text='Entrepreneur'
+				img='/event-img/2020/speakers/amin.webp'
+				link='https://www.youtube.com/watch?v=2VwRO7KipLM'
+			/>
+			<PersonCard
+				name='Hannah Martin'
+				text='Entrepreneur'
+				img='/event-img/2020/speakers/hannah.png'
+				link='https://www.youtube.com/watch?v=4UMzEORCdHY'
+			/>
+			<PersonCard
+				name='Richard Shuster'
+				text='Entrepreneur and Philanthropist'
+				img='/event-img/2020/speakers/richard.jpg'
+				link='https://www.youtube.com/watch?v=t4i3WAfJLRM'
+			/>
+			<PersonCard
+				name='Rose Schindler'
+				text='Aushwitz Survivor'
+				img='/event-img/2020/speakers/rose.jpg'
+				link='https://www.youtube.com/watch?v=hpyH130ZOTk'
+			/>
+		</div>
+	</div>
 
 	<input class='tabs-radio' type='radio' name='speakers' id='2019' />
 	<label class='tabs-label' for='2019'>2019</label>
-	<div class='tabs-content'>2019 CONTENT</div>
+	<div class='tabs-content'>
+		<div class='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 w-full gap-4'>
+			<PersonCard
+				name='Dana Wasson'
+				text='Author'
+				img='/event-img/2019/speakers/dana.jpg'
+				link='https://www.youtube.com/watch?v=DUlKmVt47yU'
+			/>
+			<PersonCard
+				name='David Dolan'
+				text='Adventurer'
+				img='/event-img/2019/speakers/david.webp'
+				link='https://www.youtube.com/watch?v=GDHqfBvWVwg'
+			/>
+			<PersonCard
+				name='Enrique Marones'
+				text='Human Rights Activist'
+				img='/event-img/2019/speakers/enrique.jpg'
+				link='https://www.youtube.com/watch?v=R3rvfCVFv0g'
+			/>
+			<PersonCard
+				name='Gary Ware'
+				text='Author'
+				img='/event-img/2019/speakers/gary.jpeg'
+				link='https://www.youtube.com/watch?v=EzE3pBr7EL8'
+			/>
+			<PersonCard
+				name='Issanna Loughman'
+				text='Professor of Psychology, University of Washington'
+				img='/event-img/2019/speakers/issanna.jpg'
+				link='https://www.youtube.com/watch?v=bWSF-yC3GwY'
+			/>
+			<PersonCard
+				name='Jack Goodwin'
+				text='MBA Candidate, Harvard Business School'
+				img='/event-img/2019/speakers/jack.jpeg'
+				link='https://www.youtube.com/watch?v=f-LczUlHAqA'
+			/>
+			<PersonCard
+				name='Natalya Gallo'
+				text='Marine Biologist'
+				img='/event-img/2019/speakers/natalya.jpg'
+				link='https://www.youtube.com/watch?v=8bIeE95UwDk'
+			/>
+			<PersonCard
+				name='Phoebe Cornog'
+				text='Designer and Author'
+				img='/event-img/2019/speakers/phoebe.jpeg'
+				link='https://www.youtube.com/watch?v=sx0HyDwSgXQ'
+			/>
+			<PersonCard
+				name='Scottie Jeannette Madden'
+				text='Author'
+				img='/event-img/2019/speakers/scottie.webp'
+				link='https://www.youtube.com/watch?v=hpyH130ZOTk'
+			/>
+		</div>
+	</div>
 </div>
 
 <style>
@@ -44,12 +216,13 @@
 	}
 
 	.tabs-radio:checked + .tabs-label + .tabs-content {
-		display: initial;
+		display: block;
 	}
 
 	.tabs-content {
 		order: 1;
 		width: 100%;
 		display: none;
+		padding-top: 1rem;
 	}
 </style>
