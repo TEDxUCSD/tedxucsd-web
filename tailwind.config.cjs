@@ -13,9 +13,9 @@ module.exports = {
 				serif: ["Playfair Display", ...defaultTheme.fontFamily.serif],
 			},
 			backgroundImage: {
-				"sixth-sense": "url('/event-img/2022/banner.png')",
-				constellate: "url('/event-img/2021/banner.png')",
-				rebooted: "url('/event-img/2020/banner.png')",
+				"sixth-sense": "url('/event-img/2022/banner.jpg')",
+				constellate: "url('/event-img/2021/banner.jpg')",
+				rebooted: "url('/event-img/2020/banner.jpg')",
 				asits: "url('/event-img/2019/banner.png')",
 			},
 		},
