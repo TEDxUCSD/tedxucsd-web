@@ -1,53 +1,86 @@
+
 ---
+import FeaturedTalk from "../components/FeaturedTalk.astro";
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
+import "@fontsource/playfair-display";
+import "@fontsource/playfair-display/700.css";
+import "@fontsource/playfair-display/700-italic.css";
 ---
 
-<Layout title='Expiration Date'>
-	<main class='bg-[#F5CFBB] min-h-[calc(100vh-74px)]'>
+<Layout title='TEDxUCSD'>
+	<main class=''>
 		<Hero />
-
-		<div class='md:max-w-5xl m-auto text-center py-8'>
-			<h1 class='text-4xl'>2024 Main Conference</h1>
-			<h1 class='text-2xl italic text-gray-700 font-light'>
-				More details coming soon...
-			</h1>
-			<div id='timer' class='flex justify-center py-10'>
-				<div class='basis-[100px]'>
-					<p id='days' class='text-6xl'>00</p>
-					<span>Days</span>
+		<section class='bg-white py-8 px-6 w-full'>
+			<div
+				class='md:max-w-5xl m-auto grid grid-cols-1 md:grid-cols-2 items-center'
+			>
+				<div>
+					<h2 class='text-2xl font-medium text-gray-500 italic'>
+						TEDxUCSanDiego Presents:
+					</h2>
+					<h1 class='text-3xl font-semibold text-ted-red'>EXPIRATION DATE</h1>
+					<h3 class='text-gray-600'>May 18, 2024</h3>
 				</div>
-				<div class='basis-[100px]'>
-					<p id='hours' class='text-6xl'>00</p>
-					<span>Hours</span>
-				</div>
-				<div class='basis-[100px]'>
-					<p id='minutes' class='text-6xl'>00</p>
-					<span>Minutes</span>
-				</div>
-				<div class='basis-[100px]'>
-					<p id='seconds' class='text-6xl'>00</p>
-					<span>Seconds</span>
+				<div>
+					<p class='py-8 text-gray-700'>
+						<span class='italic'>"Expiration Date"</span> explores the fleeting nature of
+						existence, emphasizing how the passage of time brings both progress and decline.
+						This reflection extends beyond the material world, touching on the expiration
+						of ideas and societal norms. It prompts consideration of whether expiration is
+						arbitrary or predetermined, urging proactive responses to time constraints. The
+						ambiguity of expiration invites innovation and nuance, highlighting the balance
+						between temporariness and timeliness. Ultimately, it invites contemplation on
+						navigating life's transient journey amidst constant change. Join us for 
+						TEDxUCSanDiego’s 12th annual conference for provocative talks, interactive 
+						experiences, and to be a part of ideas worth spreading!
+					</p>
+					<a class='bg-ted-red text-white p-3' href='https://lu.ma/wkloh6e6'>Tickets</a>
 				</div>
 			</div>
-		</div>
+		</section>
+		<h2 class='font-serif mt-12 text-center text-4xl text-gray-700'>
+			This Year's Speakers
+		</h2>
+		<FeaturedTalk
+			fname='Megan'
+			lname='Dickerson'
+			title='Play: Our Mutant Survival Strategy'
+			desc='Megan Dickerson is a pioneering figure in the area of museums and play. As an experience designer, curator, playworker and play advocate, Megan currently leads exhibitions at Birch Aquarium, part of Scripps Institution of Oceanography. In this and her previous roles as Director of Exhibitions at The New Children’s Museum and Senior Manager of Community Partnerships at Boston Children's Museum, Megan brings artists, scientists and the community together to develop emergent experiences that push the boundaries of museum practice. Join Megan in her talk, “Play Our Mutant Survival Strategy”, where she discusses if play might be our most important “mutant strategy?” In this thoughtful, time traveling talk, Megan invites us to rethink long held definitions of play and consider how adults might begin to recognize the rich play cues all around us. '
+			link='https://www.youtube.com/watch?v=tWmjHn6mfjc'
+			poster='/thumb1.png'
+			color='white'
+			left
+		/>
+		<FeaturedTalk
+			fname='Rose'
+			lname='Schindler'
+			title='Surviving Auschwitz, you had to have guts'
+			desc='Rose Schindler was born and raised in Seredne, Czechoslovakia. Rose was deported to Auschwitz II-Birkenau along with her parents, aunt, five sisters and two brothers when she was just 14 years old. This is the personal story of Rose surviving the Holocaust, starting a new life, ultimately finding love, joy and her life’s purpose.'
+			link='https://www.youtube.com/watch?v=hpyH130ZOTk'
+			poster='/thumb2.jpg'
+			color='gray'
+			left
+		/>
+		<FeaturedTalk
+			fname='Mayuko'
+			lname='Inoue'
+			title='How to Figure Out Who You Are as an Asian American'
+			desc="Mayuko shares her experience growing up as Japanese American and the lessons learned throughout. From challenges of growing up as a minority, to finding purpose and fulfillment in her Software Engineering career, her mental health journey, and ultimately to her creating content on Youtube. In crafting together the different pieces of her life, she'll share what she's learned to helped her define and own her own identity"
+			link='https://www.youtube.com/watch?v=v0yrY72n3tY'
+			poster='/thumb3.jpg'
+			color='white'
+			left
+		/>
+		<FeaturedTalk
+			fname='Robert'
+			lname='Kiyosaki'
+			title='Why the Rich are Getting Richer'
+			desc='Robert Kiyosaki is an entrepreneur and the author of “Rich Dad Poor Dad”, the #1 bestselling personal finance book of all time.  In his talk, he discusses the power of financial education and how it relates to income inequality'
+			link='https://www.youtube.com/watch?v=abMQhaMdQu0'
+			poster='/thumb4.png'
+			color='gray'
+			left
+		/>
 	</main>
-	<script>
-		let date = new Date("May 18, 2024 15:00:00").getTime();
-		let x = setInterval(() => {
-			let now = new Date().getTime();
-			let delta = date - now;
-			let days = Math.floor(delta / (1000 * 60 * 60 * 24));
-			let hours = Math.floor(
-				(delta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-			);
-			let minutes = Math.floor((delta % (1000 * 60 * 60)) / (1000 * 60));
-			let seconds = Math.floor((delta % (1000 * 60)) / 1000);
-
-			document.getElementById("days").innerHTML = days;
-			document.getElementById("hours").innerHTML = hours;
-			document.getElementById("minutes").innerHTML = minutes;
-			document.getElementById("seconds").innerHTML = seconds;
-		}, 1000);
-	</script>
 </Layout>
