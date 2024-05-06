@@ -1,7 +1,7 @@
 ---
 import { YouTube } from "@astro-community/astro-embed-youtube";
 
-const { fname, lname, title, desc, link, color, poster, left, right } =
+const { fname, lname, title, desc, link, color, img, left, right } =
 	Astro.props;
 
 let bg = color == "white" ? "bg-white" : "bg-gray-100";
@@ -20,7 +20,7 @@ let bg = color == "white" ? "bg-white" : "bg-gray-100";
 					<p class='font-light text-gray-400 leading-7 mb-4 md:mb-0'>{desc}</p>
 				</div>
 				<div class='col-span-2'>
-					< poster={poster} />
+					<img class='object-cover' src={img} alt={name} />
 				</div>
 			</div>
 		)
