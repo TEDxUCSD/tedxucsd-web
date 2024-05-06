@@ -1,0 +1,45 @@
+---
+import { YouTube } from "@astro-community/astro-embed-youtube";
+
+const { fname, lname, title, desc, link, color, img, left, right } =
+	Astro.props;
+
+let bg = color == "white" ? "bg-white" : "bg-gray-100";
+---
+
+<section class={`${bg} px-6 w-full`}>
+	{
+		left && (
+			<div class='py-16 md:max-w-5xl m-auto grid gap-8 grid-cols-1 md:grid-cols-3 items-center text-center md:text-left'>
+				<div class='col-span-2'>
+					<h3 class='font-light text-gray-400 uppercase'>{title}</h3>
+					<h2 class='text-4xl text-gray-400 font-serif font-medium pt-2 pb-5'>
+						{fname}
+						<span class='italic text-black'>{lname}</span>
+					</h2>
+					<p class='font-light text-gray-400 leading-7 mb-4 md:mb-0'>{desc}</p>
+				</div>
+				<div class='col-span-1'>
+					<img class='object-cover' src={img} alt='' />
+				</div>
+			</div>
+		)
+	}
+	{
+		right && (
+			<div class='py-16 md:max-w-5xl m-auto grid gap-4 grid-cols-1 md:grid-cols-3 items-center text-center md:text-right'>
+				<div class='col-span-2 row-start-2 md:row-start-1'>
+					<YouTube id={link} playlabel='' poster={poster} />
+				</div>
+				<div class=''>
+					<h3 class='font-light text-gray-400 uppercase'>{title}</h3>
+					<h2 class='text-4xl text-gray-400 font-serif font-medium pt-2 pb-5'>
+						{fname}
+						<span class='italic text-black'>{lname}</span>
+					</h2>
+					<p class='font-light text-gray-400 leading-7 mb-4 md:mb-0'>{desc}</p>
+				</div>
+			</div>
+		)
+	}
+</section>
