@@ -1,0 +1,74 @@
+---
+import FeaturedTalk from "../../components/FeaturedTalk.astro";
+import Title from "../../components/Title.astro";
+import Layout from "../../layouts/Layout.astro";
+import "@fontsource/playfair-display";
+import "@fontsource/playfair-display/700.css";
+import "@fontsource/playfair-display/700-italic.css";
+---
+
+<Layout title='Wordplay'>
+	<Title
+		date='May 20, 2023'
+		title='Wordplay'
+		loc='Price Center Theater, La Jolla, CA'
+		bg='bg-wordplay'
+	/>
+	<section class='bg-white px-6 w-full pb-4'>
+		<div class='md:max-w-5xl m-auto'>
+			<h2 class='text-3xl font-light mb-8 hidden md:block md:pt-8 md:mb-4'>
+				Description
+			</h2>
+			<p class='text-gray-600 py-3'>
+				If we view language as a sandbox, what can be built? How can it
+				be shaped? What are its powers and limits? How can we play with
+				its words to reveal something that transcends the bounds of mere 
+				words on a paper?
+			</p>
+			<p class='text-gray-600 py-3'>
+				<em>"Wordplay"</em> is an examination of the diverse forms of expression
+				that are used to convey ideas, share perspectives, and drive 
+				change. With the wide range of languages used across the human 
+				population, one thing that remains constant is the power that 
+				words hold in connecting billions of people in a multifaceted 
+				world. The sheer possibilities of language lie in the breadth 
+				of its different interpretations and mediums, as it exists as 
+				both a spoken and unspoken art form. 
+			</p>
+			<p class='text-gray-600 py-3'>
+				Words impact us in more ways than simple characters on a sheet 
+				of paper. The presence, or lack thereof, of language has the 
+				power to influence our minds and expose our vulnerabilities. 
+				It can empower us to reclaim our identities and be used to drive
+				change. While words can be used to unites us, it also has the 
+				ability to manipulate and create barriers between communities. 
+				No matter the form, words have continued to be a vital tool in
+				shaping communities, culture, and individuals. 
+			</p>
+			<p class ='text-gray-600 py-3'>
+				Born from the realm of language, <em>"Wordplay"</em> encompasses the
+				freedom of expression, the possibility within different forms
+				of communication, and the nuances of meaning. We invite you to
+				discover how words play into your own sandbox. 
+			</p>
+		</div>
+	</section>
+	<FeaturedTalk
+		fname='Ursula'
+		lname='Meyer'
+		title='Shakespeare Plays with Words'
+		desc="Join UCSD Professor Ursula Meyer, actress and vocal coach, as she shares her deep love affair with words and word play, highlighting the wonder of Shakespeare's tremendous ability to make language dance."
+		link='https://www.youtube.com/watch?v=eseWDHXkvPw&ab_channel=TEDxTalks'
+		color='gray'
+		left
+	/>
+	<FeaturedTalk
+		fname='Nadia'
+		lname='Odunayo'
+		title='A Word of Warning'
+		desc='Join Nadia for a thought-provoking talk exploring the complexities surrounding content warnings in literature. We’ll delve into the perspectives of authors, readers, and platform creators, tackling the delicate balance between conveying sensitive content, reader protection, and artistic liberty.'
+		link='https://www.youtube.com/watch?v=bmAteDkcBwg&ab_channel=TEDxTalks'
+		color='white'
+		right
+	/>
+</Layout>
