@@ -3,6 +3,25 @@ import PersonCard from "./PersonCard.astro";
 ---
 
 <div class='tabs'>
+<input class='tabs-radio' type='radio' name='speakers' id='2023' checked />
+	<label class='tabs-label' for='2023'>2023</label>
+	<div class='tabs-content'>
+		<div class='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 w-full gap-4'>
+			<PersonCard
+				name='Ursula Meyer'
+				text='Actress and Vocal Coach'
+				img='/event-img/2023/speakers/ursula-meyer.jpeg'
+				link='https://youtu.be/eseWDHXkvPw?si=--BADrZ38dZ0PDSL'
+			/>
+			<PersonCard
+				name='Nadia Odunayo'
+				text='Founder and Software Engineer'
+				img='/event-img/2023/speakers/nadia-odunayo.jpg'
+				link='https://youtu.be/bmAteDkcBwg?si=ngkXzul3i_-QZ-gu'
+			/>
+		</div>
+	</div>
+
 	<input class='tabs-radio' type='radio' name='speakers' id='2022' checked />
 	<label class='tabs-label' for='2022'>2022</label>
 	<div class='tabs-content'>
