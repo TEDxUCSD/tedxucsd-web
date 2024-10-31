@@ -1,89 +1,92 @@
 ---
-import FeaturedTalk from "../components/FeaturedTalk.astro";
-import Hero from "../components/Hero.astro";
+import SpeakerFeature from "../components/SpeakerFeature.astro";
 import Layout from "../layouts/Layout.astro";
 import "@fontsource/playfair-display";
 import "@fontsource/playfair-display/700.css";
 import "@fontsource/playfair-display/700-italic.css";
 ---
 
-<Layout title='TEDxUCSD'>
+<Layout title='Home'>
 	<main class=''>
-		<Hero />
+		<div class='w-full'>
+	<img
+			class='overflow-clip object-cover w-full h-full'
+			src='/banners/tedx-landing-page-banner.png'
+			alt='TEDxUCSD Speaker Banner'
+		/></a
+	>
+</div>
 		<section class='bg-white py-8 px-6 w-full'>
-			<div
-				class='md:max-w-5xl m-auto grid grid-cols-1 md:grid-cols-2 items-center'
-			>
+			<div class='md:max-w-5xl m-auto grid grid-cols-1 md:grid-cols-2 items-center'>
 				<div>
 					<h2 class='text-2xl font-medium text-gray-500 italic'>
 						TEDxUCSanDiego Presents:
 					</h2>
-					<h1 class='text-3xl font-semibold text-ted-red'>EXPIRATION DATE</h1>
-					<h3 class='text-gray-600'>May 18, 2024</h3>
+					<h1 class='text-3xl font-semibold text-ted-red mb-2'>COMING SOON!</h1>
+					<h3 class='text-gray-600 mb-8'>More to come in 2025!</h3>
 				</div>
 				<div>
 					<p class='py-8 text-gray-700'>
-						<span class='italic'>"Expiration Date"</span> explores the fleeting nature of
-						existence, emphasizing how the passage of time brings both progress and decline.
-						This reflection extends beyond the material world, touching on the expiration
-						of ideas and societal norms. It prompts consideration of whether expiration is
-						arbitrary or predetermined, urging proactive responses to time constraints. The
-						ambiguity of expiration invites innovation and nuance, highlighting the balance
-						between temporariness and timeliness. Ultimately, it invites contemplation on
-						navigating life's transient journey amidst constant change. Join us for 
-						TEDxUCSanDiego’s 12th annual conference for provocative talks, interactive 
-						experiences, and to be a part of ideas worth spreading! Doors open at 3:00pm, event
-						begins at 4:00pm.
+						<!-- description -->
 					</p>
-					<a class='bg-ted-red text-white p-3' href='https://lu.ma/wkloh6e6'>Tickets</a>
-					</p>
-					<a class='bg-ted-red text-white p-3' href='/expirationdate'>Learn more</a>
+					<!-- <a class='bg-ted-red text-white p-3 mt-8 inline-block' href='https://lu.ma/wkloh6e6'>Tickets</a> -->
 				</div>
 			</div>
-			</div>
-			</div>
 		</section>
-		<h2 class='font-serif mt-12 text-center text-4xl text-gray-700'>
-			Featured Talks from Our Past Events
-		</h2>
-		<FeaturedTalk
-			fname='Christine'
-			lname='Ha'
-			title='How the Blind See the World'
-			desc='Christine Ha talks about her personal experiences being blind and how it shaped her perspective on how people treat the disabled.  She sheds light on how many of the things we take for granted everyday are not always so accommodating to others who deal with disabilities. '
-			link='https://www.youtube.com/watch?v=tWmjHn6mfjc'
-			poster='/thumb1.png'
+
+
+		<h4 class='font-serif mt-12 text-center text-4xl text-gray-700'>
+			TEDxUCSD 2024: Expiration Date
+		</h4>
+		<p class='text-center text-gray-600 mt-4 mb-8 max-w-2xl mx-auto'>
+			Exploring the fleeting nature of existence, last year's theme 'Expiration Date' reflects on how time shapes progress and decline, urging us to respond to life's impermanence with innovation, balance, and mindful navigation of constant change.
+		</p>
+		<p class='text-center text-gray-500 text-lg'>
+			Check out last year's speakers below!
+		</p>
+		<SpeakerFeature
+			fname='Megan'
+			lname='Dickerson'
+			title='Play: Our Mutant Survival Strategy'
+			desc="Megan Dickerson is a pioneering figure in the area of museums and play. As an experience designer, curator, playworker and play advocate, Megan currently leads exhibitions at Birch Aquarium, part of Scripps Institution of Oceanography. In this and her previous roles as Director of Exhibitions at The New Children's Museum and Senior Manager of Community Partnerships at Boston Children's Museum, Megan brings artists, scientists and the community together to develop emergent experiences that push the boundaries of museum practice. Join Megan in her talk, “Play Our Mutant Survival Strategy”, where she discusses if play might be our most important “mutant strategy?” In this thoughtful, time traveling talk, Megan invites us to rethink long held definitions of play and consider how adults might begin to recognize the rich play cues all around us."
+			img='/event-img/2024/speakers/megan.jpg'
 			color='white'
 			left
 		/>
-		<FeaturedTalk
-			fname='Rose'
-			lname='Schindler'
-			title='Surviving Auschwitz, you had to have guts'
-			desc='Rose Schindler was born and raised in Seredne, Czechoslovakia. Rose was deported to Auschwitz II-Birkenau along with her parents, aunt, five sisters and two brothers when she was just 14 years old. This is the personal story of Rose surviving the Holocaust, starting a new life, ultimately finding love, joy and her life’s purpose.'
-			link='https://www.youtube.com/watch?v=hpyH130ZOTk'
-			poster='/thumb2.jpg'
+		<SpeakerFeature
+			fname='Tanya'
+			lname='Taylor'
+			title="You Can't Plan for the Unexpected: How to Financially Protect Your Lifestyle"
+			desc='With over two decades helping people improve their financial lives, Tanya Taylor is on a mission to stop the cycle of poverty and build generational wealth. She is an award winning author, and the founder and CEO of Grow Your Wealth, a financial education platform which empowers women to overcome financial barriers and build wealth, by meeting them exactly where they are. Tanya infuses her knowledge from learning and teaching about wealth building, wealth with her 24 years on Wall Street in the Banking and Insurance Industry. Drawing from personal experience and her journey from escaping poverty to achieving many of her financial goals, Tanya sheds light on how quickly one can go from feeling like they are on solid financial ground to having the rug pulled from under them due to a sudden disability. Join Tanya in this conversation of learning practical action steps that we can take to protect ourselves and our families, ultimately setting ourselves up to be financially secure.'
+			img='/event-img/2024/speakers/tanya.jpg'
 			color='gray'
 			left
 		/>
-		<FeaturedTalk
-			fname='Mayuko'
-			lname='Inoue'
-			title='How to Figure Out Who You Are as an Asian American'
-			desc="Mayuko shares her experience growing up as Japanese American and the lessons learned throughout. From challenges of growing up as a minority, to finding purpose and fulfillment in her Software Engineering career, her mental health journey, and ultimately to her creating content on Youtube. In crafting together the different pieces of her life, she'll share what she's learned to helped her define and own her own identity"
-			link='https://www.youtube.com/watch?v=v0yrY72n3tY'
-			poster='/thumb3.jpg'
+		<SpeakerFeature
+			fname='Justin'
+			lname='Scher'
+			title="It’s Never Too Late to Change Your Dog’s Behaviors"
+			desc="Justin Scher is Certified Dog Behavioral Therapist and Master Dog Trainer for International company, Bark Busters Home Dog Training out of Australia. Dogs are his life passion. He is the reigning 2014 & 2016 International Trainer / Therapist of the Year, as well as the 2010, 2014, 2016, 2017, 2018 and 2020 U.S. Trainer/Therapist of the Year. With over 15 years experience as a dog behavioral therapist and having worked with thousands of dogs, he can essentially help ANY DOG with ANY PROBLEM! In his talk, “It’s Never Too Late to Change Your Dog’s Behaviors”, Justin shares his expertise in the proper tools of communication as well as a deep understanding of a dog’s psychology to dramatically transform dogs to where owners and their dogs can truly enjoy their lives together, in harmony and free of stress. Is the old saying “You can’t teach an old dog new tricks” true? Well, when it pertains to actual dog behaviors, that statement is simply false."
+			img='/event-img/2024/speakers/justin.jpg'
 			color='white'
 			left
 		/>
-		<FeaturedTalk
-			fname='Robert'
-			lname='Kiyosaki'
-			title='Why the Rich are Getting Richer'
-			desc='Robert Kiyosaki is an entrepreneur and the author of “Rich Dad Poor Dad”, the #1 bestselling personal finance book of all time.  In his talk, he discusses the power of financial education and how it relates to income inequality'
-			link='https://www.youtube.com/watch?v=abMQhaMdQu0'
-			poster='/thumb4.png'
+		<SpeakerFeature
+			fname='Pascal'
+			lname='Gagneux'
+			title='We are the Planet Altering Ape'
+			desc="Pascal Gagneux is a Professor of Pathology and Anthropology at UC San Diego and serves as CARTA's Executive Co-Director. The Gagneux laboratory studies cell-surface molecules in closely related primates species and how glycan evolution is shaped by constraints from endogenous biochemistry and exogenous, pathogen-mediated natural selection, but can also have consequences for sexual selection. Humans are the “planet-altering ape”. In his talk, “We are the Planet Altering Ape”, Dr. Gagneux encompasses our expansion across the globe, technological prowess, and booming populations that are causing the sixth mass extinction and threaten to hasten our own. We humans have evolved distinct capabilities: we cooperate at massive scales, we communicate with language, we are imaginative, and self-aware. Can we rely on our uniquely evolved features for solving these existential challenges?"
+			img='/event-img/2024/speakers/pascal.jpg'
 			color='gray'
+			left
+		/>
+		<SpeakerFeature
+			fname='Maria'
+			lname='Ho'
+			title='Decision Making Like a (Poker) Pro'
+			desc="Maria Ho is a Hall of Fame professional poker player and award-winning TV broadcaster who has amassed over $7,000,000 in live and online poker tournament earnings. She is one of the world's most recognized and successful players in the game and is currently ranked #3 on the World Series of Poker's All-Time Female Money Earners. Maria was inducted into the Women In Poker Hall of Fame in 2018, the very first year she became eligible and is the youngest ever to be inducted. World-renowned poker professional Maria Ho breaks down the most important factors to consider when time is of the essence and you are working with incomplete information. As our lives are defined by our ability to make decisions, but many of us have not optimized our decision-making process, discover how to make decisions effectively in high-pressure situations, much like a poker player would."
+			img='/event-img/2024/speakers/maria.jpg'
+			color='white'
 			left
 		/>
 	</main>
