@@ -14,7 +14,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				"expiration-date": "url('/event-img/2024/banner-2024.png')",
-				"word-play": "url('/event-img/2023/banner-2023.png')",
+				"wordplay": "url('/event-img/2023/banner-2023.png')",
 				"sixth-sense": "url('/event-img/2022/banner.jpg')",
 				constellate: "url('/event-img/2021/banner.jpg')",
 				rebooted: "url('/event-img/2020/banner.jpg')",

@@ -1,0 +1,52 @@
+---
+import Banner from "../../components/Banner.astro";
+import FeaturedTalk from "../../components/FeaturedTalk.astro";
+import Title from "../../components/Title.astro";
+import Layout from "../../layouts/Layout.astro";
+import "@fontsource/playfair-display";
+import "@fontsource/playfair-display/700.css";
+import "@fontsource/playfair-display/700-italic.css";
+---
+
+<Layout title='Word Play'>
+	<Title
+		date='May 20, 2023'
+		title='Wordplay'
+		loc='Price Center Theater, La Jolla, CA'
+		bg='bg-wordplay'
+	/>
+	<section class='bg-white px-6 w-full pb-4'>
+		<div class='md:max-w-5xl m-auto'>
+			<h2 class='text-3xl font-light mb-8 hidden md:block md:pt-8 md:mb-4'>
+				Description
+			</h2>
+			<p class='text-gray-600 py-3'>
+				"Wordplay" is an examination of the diverse forms of expression that are 
+                used to convey emotions, drive change, and express ideas. The presence, or 
+                lack thereof, of words has the power to influence our minds and expose our 
+                vulnerabilities. Words can be used to unite us, but also have the ability 
+                to manipulate and create barriers within each other. "Wordplay" encompasses 
+                the freedom of expression, the possibility within different forms of 
+                communication, and the nuances of meaning.
+			</p>
+		</div>
+	</section>
+	<FeaturedTalk
+		fname='Ursula'
+		lname='Meyer'
+		title='Shakespeare Plays with Words'
+		desc="Ursula Meyer is an actress and vocal coach, working extensively in regional theatre across the nation, from the La Jolla Playhouse to the Guthrie Theatre in Minneapolis. In addition, she serves as the Head of Graduate Acting in UCSD's Department of Theatre and Dance. She shares her deep love affair with words and word play, highlighting the wonder of Shakespeare’s tremendous ability to make language dance."
+		link='https://www.youtube.com/watch?v=eseWDHXkvPw'
+		color='white'
+		left
+	/>
+	<FeaturedTalk
+		fname='Nadia'
+		lname='Odunayo'
+		title="A Word of Warning"
+		desc="If you're an avid reader and huge lover of books, you may have heard of StoryGraph, a book cataloging platform for authors and bookworms across the world! Nadia Odunayo is the founder and CEO of StoryGraph, and she works day and night to make sure that people across the world can share her passion for literary works. Nadia is particularly interested in the process and execution around building products, particularly from scratch. She has a passion for fiction and storytelling, and is interested in how these can be used as tools for education."
+		link='https://www.youtube.com/watch?v=bmAteDkcBwg'
+		color='gray'
+		right
+	/>
+</Layout>
