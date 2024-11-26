@@ -1,90 +1,80 @@
 ---
-import FeaturedTalk from "../components/FeaturedTalk.astro";
-import Hero from "../components/Hero.astro";
-import Layout from "../layouts/Layout.astro";
+import Banner from "../../components/Banner.astro";
+import FeaturedTalk from "../../components/FeaturedTalk.astro";
+import Title from "../../components/Title.astro";
+import Layout from "../../layouts/Layout.astro";
 import "@fontsource/playfair-display";
 import "@fontsource/playfair-display/700.css";
 import "@fontsource/playfair-display/700-italic.css";
 ---
 
-<Layout title='TEDxUCSD'>
-	<main class=''>
-		<Hero />
-		<section class='bg-white py-8 px-6 w-full'>
-			<div
-				class='md:max-w-5xl m-auto grid grid-cols-1 md:grid-cols-2 items-center'
-			>
-				<div>
-					<h2 class='text-2xl font-medium text-gray-500 italic'>
-						TEDxUCSanDiego Presents:
-					</h2>
-					<h1 class='text-3xl font-semibold text-ted-red'>EXPIRATION DATE</h1>
-					<h3 class='text-gray-600'>May 18, 2024</h3>
-				</div>
-				<div>
-					<p class='py-8 text-gray-700'>
-						<span class='italic'>"Expiration Date"</span> explores the fleeting nature of
-						existence, emphasizing how the passage of time brings both progress and decline.
-						This reflection extends beyond the material world, touching on the expiration
-						of ideas and societal norms. It prompts consideration of whether expiration is
-						arbitrary or predetermined, urging proactive responses to time constraints. The
-						ambiguity of expiration invites innovation and nuance, highlighting the balance
-						between temporariness and timeliness. Ultimately, it invites contemplation on
-						navigating life's transient journey amidst constant change. Join us for 
-						TEDxUCSanDiego’s 12th annual conference for provocative talks, interactive 
-						experiences, and to be a part of ideas worth spreading! Doors open at 3:00pm, event
-						begins at 4:00pm.
-					</p>
-					<a class='bg-ted-red text-white p-3' href='https://lu.ma/wkloh6e6'>Tickets</a>
-					</p>
-					<a class='bg-ted-red text-white p-3' href='/expirationdate'>Learn more</a>
-				</div>
-			</div>
-			</div>
-			</div>
-		</section>
-		<h2 class='font-serif mt-12 text-center text-4xl text-gray-700'>
-			Featured Talks from Our Past Events
-		</h2>
-		<FeaturedTalk
-			fname='Christine'
-			lname='Ha'
-			title='How the Blind See the World'
-			desc='Christine Ha talks about her personal experiences being blind and how it shaped her perspective on how people treat the disabled.  She sheds light on how many of the things we take for granted everyday are not always so accommodating to others who deal with disabilities. '
-			link='https://www.youtube.com/watch?v=tWmjHn6mfjc'
-			poster='/thumb1.png'
-			color='white'
-			left
-		/>
-		<FeaturedTalk
-			fname='Rose'
-			lname='Schindler'
-			title='Surviving Auschwitz, you had to have guts'
-			desc='Rose Schindler was born and raised in Seredne, Czechoslovakia. Rose was deported to Auschwitz II-Birkenau along with her parents, aunt, five sisters and two brothers when she was just 14 years old. This is the personal story of Rose surviving the Holocaust, starting a new life, ultimately finding love, joy and her life’s purpose.'
-			link='https://www.youtube.com/watch?v=hpyH130ZOTk'
-			poster='/thumb2.jpg'
-			color='gray'
-			left
-		/>
-		<FeaturedTalk
-			fname='Mayuko'
-			lname='Inoue'
-			title='How to Figure Out Who You Are as an Asian American'
-			desc="Mayuko shares her experience growing up as Japanese American and the lessons learned throughout. From challenges of growing up as a minority, to finding purpose and fulfillment in her Software Engineering career, her mental health journey, and ultimately to her creating content on Youtube. In crafting together the different pieces of her life, she'll share what she's learned to helped her define and own her own identity"
-			link='https://www.youtube.com/watch?v=v0yrY72n3tY'
-			poster='/thumb3.jpg'
-			color='white'
-			left
-		/>
-		<FeaturedTalk
-			fname='Robert'
-			lname='Kiyosaki'
-			title='Why the Rich are Getting Richer'
-			desc='Robert Kiyosaki is an entrepreneur and the author of “Rich Dad Poor Dad”, the #1 bestselling personal finance book of all time.  In his talk, he discusses the power of financial education and how it relates to income inequality'
-			link='https://www.youtube.com/watch?v=abMQhaMdQu0'
-			poster='/thumb4.png'
-			color='gray'
-			left
-		/>
-	</main>
+<Layout title='Expiration'>
+	<Title
+		date='May 18, 2024'
+		title='Expiration Date'
+		loc='Price Center Theater, La Jolla, CA'
+		bg='bg-expiration-date'
+	/>
+	<section class='bg-white px-6 w-full pb-4'>
+		<div class='md:max-w-5xl m-auto'>
+			<h2 class='text-3xl font-light mb-8 hidden md:block md:pt-8 md:mb-4'>
+				Description
+			</h2>
+			<p class='text-gray-600 py-3'>
+				"Expiration Date" explores the fleeting nature of existence, emphasizing how 
+				the passage of time brings both progress and decline. This reflection extends 
+				beyond the material world, touching on the expiration of ideas and societal norms. 
+				It prompts consideration of whether expiration is arbitrary or predetermined, 
+				urging proactive responses to time constraints. The ambiguity of expiration invites 
+				innovation and nuance, highlighting the balance between temporariness and timeliness. 
+				Ultimately, it invites contemplation on navigating life's transient journey amidst 
+				constant change.
+			</p>
+		</div>
+	</section>
+	<FeaturedTalk
+		fname='Megan'
+		lname='Dickerson'
+		title='Play: Our Mutant Survival Strategy'
+		desc="Megan Dickerson is a leading figure in museums and play. As an experience designer and curator at Birch Aquarium and in previous roles, including Director of Exhibitions at The New Children's Museum and Senior Manager at Boston Children's Museum, she merges art, science, and community engagement to innovate museum practices. In her talk, “Play Our Mutant Survival Strategy”, Megan explores the concept of play as a crucial adaptive strategy, urging a reevaluation of how adults perceive and engage with play cues in our environment."
+		link='https://www.youtube.com/watch?v=5WQahUdNvXI'
+		color='white'
+		left
+	/>
+	<FeaturedTalk
+		fname='Tanya'
+		lname='Taylor'
+		title="You Can't Plan for the Unexpected: How to Financially Protect Your Lifestyle"
+		desc='Tanya Taylor, with over two decades of experience in finance, is dedicated to breaking the cycle of poverty and fostering generational wealth. As an award-winning author and founder of Grow Your Wealth, she empowers women to build wealth by starting from where they are. With her extensive background on Wall Street, Tanya combines her personal journey from poverty to financial security to highlight the vulnerabilities people face, such as sudden disabilities. In her discussions, she offers practical steps to safeguard financial well-being for individuals and their families.'
+		link='https://www.youtube.com/watch?v=aWQoe91QTKU&t=4s'
+		color='gray'
+		right
+	/>
+	<FeaturedTalk
+		fname='Justin'
+		lname='Scher'
+		title='It’s Never Too Late to Change Your Dog’s Behaviors'
+		desc="Justin Scher is a Certified Dog Behavioral Therapist and Master Trainer for Bark Busters Home Dog Training, with over 15 years of experience. He has won multiple international and U.S. awards for his expertise. Justin specializes in resolving any dog behavior issue and in his talk, “It’s Never Too Late to Change Your Dog’s Behaviors,” he disproves the myth that old dogs can’t learn new tricks. He explains how using the right communication tools and understanding canine psychology can transform the relationship between dogs and their owners, fostering a stress-free, harmonious environment."
+		link='https://www.youtube.com/watch?v=R8nNvuRFaHQ'
+		color='white'
+		left
+	/>
+	<FeaturedTalk
+		fname='Pascal'
+		lname='Gagneux'
+		title='We are the Planet Altering Ape'
+		desc='Pascal Gagneux, a UC San Diego Professor of Pathology and Anthropology and Executive Co-Director of CARTA, focuses his research on cell-surface molecules in primates and the impact of glycan evolution. In his talk, "We are the Planet Altering Ape," Dr. Gagneux discusses how humans, with our technological advancements and rapid population growth, are driving the sixth mass extinction and potentially accelerating our own demise. He explores whether our unique human traits, such as cooperation, communication, imagination, and self-awareness, can help us overcome these critical global challenges.'
+		link='https://www.youtube.com/watch?v=iLMRpvQUJQY&t=47s'
+		color='gray'
+		right
+	/>
+	<FeaturedTalk
+		fname='Maria'
+		lname='Ho'
+		title='Decision Making Like a (Poker) Pro'
+		desc='Maria Ho, a Hall of Fame professional poker player and TV broadcaster, has earned over $7 million from poker tournaments and is ranked #3 among female players worldwide. Inducted into the Women In Poker Hall of Fame in 2018, Maria is known for her expertise in making quick, effective decisions under pressure. In her discussions, she explores how to optimize decision-making processes in high-pressure situations, drawing parallels between poker strategies and everyday life choices.'
+		link='https://www.youtube.com/@TEDx'
+		color='white'
+		left
+	/>
 </Layout>
