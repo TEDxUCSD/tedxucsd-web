@@ -1,29 +1,97 @@
 ---
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-
 const images = [
-  "/images/photo1.jpg",
-  "/images/photo2.jpg",
-  "/images/photo3.jpg",
-  "/images/photo4.jpg"
+  "/images/fabricated1.jpg",
+  "/images/fabricated2.jpg",
+  "/images/fabricated3.jpg",
+  "/images/fabricated6.jpg",
+  "/images/fabricated4.jpg",
+  "/images/fabricated5.jpg",
+  "/images/fabricated7.jpg",
+  "/images/fabricated8.jpg"
 ];
 ---
 
-<Swiper
-  modules={[Navigation, Pagination]}
-  navigation
-  pagination={{ clickable: true }}
-  spaceBetween={20}
-  slidesPerView={1}
-  class="w-full max-w-4xl mx-auto"
->
-  {images.map((src, index) => (
-    <SwiperSlide key={index}>
-      <img src={src} alt={`Slide ${index + 1}`} class="w-full h-auto rounded-lg shadow-lg" />
-    </SwiperSlide>
-  ))}
-</Swiper>
+<style>
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .carousel-btn.prev {
+    left: 10px;
+  }
+
+  .carousel-btn.next {
+    right: 10px;
+  }
+</style>
+
+<div class="carousel-container">
+  <div class="carousel-track">
+    {images.map((src, index) => (
+      <div class="carousel-slide" key={index}>
+        <img src={src} alt={`Slide ${index + 1}`} />
+      </div>
+    ))}
+  </div>
+
+  <button class="carousel-btn prev">&#10094;</button>
+  <button class="carousel-btn next">&#10095;</button>
+</div>
+
+<script>
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  let currentIndex = 0;
+
+  function updateSlidePosition() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlidePosition();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlidePosition();
+  });
+</script>
