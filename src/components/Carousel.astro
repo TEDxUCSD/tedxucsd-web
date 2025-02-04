@@ -1,0 +1,29 @@
+---
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+
+const images = [
+  "/images/photo1.jpg",
+  "/images/photo2.jpg",
+  "/images/photo3.jpg",
+  "/images/photo4.jpg"
+];
+---
+
+<Swiper
+  modules={[Navigation, Pagination]}
+  navigation
+  pagination={{ clickable: true }}
+  spaceBetween={20}
+  slidesPerView={1}
+  class="w-full max-w-4xl mx-auto"
+>
+  {images.map((src, index) => (
+    <SwiperSlide key={index}>
+      <img src={src} alt={`Slide ${index + 1}`} class="w-full h-auto rounded-lg shadow-lg" />
+    </SwiperSlide>
+  ))}
+</Swiper>
