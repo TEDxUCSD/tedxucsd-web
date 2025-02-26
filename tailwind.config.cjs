@@ -20,6 +20,22 @@ module.exports = {
 				rebooted: "url('/event-img/2020/banner.jpg')",
 				asits: "url('/event-img/2019/banner.png')",
 			},
+			keyframes: {
+				fadeInUp: {
+				  '0%': {
+					opacity: '0',
+					transform: 'translateY(20px)',
+				  },
+				  '100%': {
+					opacity: '1',
+					transform: 'translateY(0)',
+				  },
+				},
+			  },
+			  animation: {
+				'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+			  },
+			  mode: 'jit',
 		},
 	},
 	plugins: [],
