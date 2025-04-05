@@ -1,0 +1,35 @@
+---
+const targetDate = new Date('2025-05-17T15:00:00'); // Optional if needed elsewhere
+---
+
+<script type="module" client:load>
+  const target = new Date("2025-05-17T15:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = target - now;
+
+    const countdownEl = document.getElementById("countdown");
+
+    if (!countdownEl) return;
+
+    if (distance < 0) {
+      countdownEl.innerHTML = "Event has started!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
+<div class="text-center text-3xl font-bold text-ted-red mt-6 mb-8" id="countdown">
+  Loading countdown...
+</div>
