@@ -32,8 +32,9 @@ import Countdown from "../components/Countdown.astro";
 		<Countdown />
 		<section class='bg-black text-white py-12'>
 			<div class='m-auto text-center max-w-full md:max-w-5xl mb-14'>
-				<h1 class='text-6xl font-semibold mb-4 animate-fade-in-up'>What is <a href="https://www.ted.com/tedx" class='text-ted-red underline' target="_blank" rel="noopener noreferrer">TEDx
-				</a>?</h1>
+				<h1 id="whatIsTedx" class="text-6xl font-semibold mb-4 opacity-0 translate-y-6 transition-all duration-[1100ms]">
+					What is <a href="https://www.ted.com/tedx" class='text-ted-red underline' target="_blank" rel="noopener noreferrer">TEDx</a>?
+				</h1>
 				<p class='text-lg mb-8'>
 					In the spirit of ideas worth spreading, TED has created a program called TEDx. 
 					TEDx is a program of local, self-organized events that bring people together to 
@@ -128,6 +129,23 @@ import Countdown from "../components/Countdown.astro";
 				backToTopBtn.style.opacity = "0";
 			  }
 			});
+			const observer = new IntersectionObserver(
+				(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+					entry.target.classList.remove("opacity-0", "translate-y-6");
+					entry.target.classList.add("opacity-100", "translate-y-0");
+					} else {
+					entry.target.classList.remove("opacity-100", "translate-y-0");
+					entry.target.classList.add("opacity-0", "translate-y-6");
+					}
+				});
+				},
+				{ threshold: 0.3 }
+			);
+
+			const tedxHeading = document.getElementById("whatIsTedx");
+			observer.observe(tedxHeading);
 		</script>
 	</main>
 </Layout>
