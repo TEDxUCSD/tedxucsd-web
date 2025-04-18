@@ -112,5 +112,22 @@ import Countdown from "../components/Countdown.astro";
 				</div>
 			</div>
 		</div> -->
+		<button
+			id="backToTopBtn"
+			class="fixed bottom-6 right-6 bg-ted-red text-white px-4 py-2 rounded-full shadow-md opacity-0 transition-opacity duration-300 hover:bg-red-700 z-50"
+			onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+			>
+			↑ Top
+		</button>
+		<script is:inline>
+			const backToTopBtn = document.getElementById("backToTopBtn");
+			window.addEventListener("scroll", () => {
+			  if (window.scrollY > 300) {
+				backToTopBtn.style.opacity = "1";
+			  } else {
+				backToTopBtn.style.opacity = "0";
+			  }
+			});
+		</script>
 	</main>
 </Layout>
