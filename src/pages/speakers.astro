@@ -1,11 +1,13 @@
 ---
 import Banner from "../components/Banner.astro";
 import EventCard from "../components/EventCard.astro";
-import Tabs from "../components/Tabs.astro";
+import MainConference from "../components/MainConference.astro";
 import Layout from "../layouts/Layout.astro";
+import Salon from "../components/Salon.astro";
+
 ---
 
-<Layout title='Speakers'>
+<!-- <Layout title='Speakers'>
 	<Banner url='/speakers.png' />
 	<section class='bg-white py-8 px-6 w-full'>
 		<div class='md:max-w-5xl m-auto'>
@@ -13,4 +15,29 @@ import Layout from "../layouts/Layout.astro";
 			<Tabs />
 		</div>
 	</section>
-</Layout>
+</Layout> -->
+
+
+<Layout title='Speakers'>
+	<Banner url='/speakers.png' />
+	<section class='bg-white py-8 px-6 w-full'>
+	  <div class='md:max-w-5xl m-auto'>
+		<h2 class='text-3xl font-light mb-8'>Speakers</h2>
+  
+		<!-- Sub-tabs for Main Conference and Salon -->
+		<div class="tabs">
+		  <input class="tabs-radio" type="radio" name="sub-tab" id="main" checked>
+		  <label class="tabs-label" for="main">Main Conference</label>
+		  <div class="tabs-content">
+			<MainConference />
+		  </div>
+  
+		  <input class="tabs-radio" type="radio" name="sub-tab" id="salon">
+		  <label class="tabs-label" for="salon">Salon</label>
+		  <div class="tabs-content">
+			<Salon />
+		  </div>
+		</div>
+	  </div>
+	</section>
+  </Layout>
