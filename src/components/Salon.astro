@@ -1,0 +1,118 @@
+---
+import PersonCard from "./PersonCard.astro";
+---
+
+<div class='tabs'>
+  <input class='tabs-radio' type='radio' name='salon-speakers' id='salon-2024' checked />
+  <label class='tabs-label' for='salon-2024'>2024</label>
+  <div class='tabs-content'>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 w-full gap-4">
+      <PersonCard
+        name="Julian Jackson"
+        text="Student Speaker"
+        img="/event-img/2024/spring-salon/julian-jackson.jpg"
+        link="https://www.youtube.com/watch?v=example"
+      />
+      <PersonCard
+        name="Ana Roberts"
+        text="Student Speaker"
+        img="/event-img/2024/spring-salon/ana-roberts.jpg"
+        link="https://www.youtube.com/watch?v=example"
+      />
+    </div>
+  </div>
+  <input class='tabs-radio' type='radio' name='salon-speakers' id='salon-2023' checked />
+  <label class='tabs-label' for='salon-2023'>2023</label>
+  <div class='tabs-content'>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 w-full gap-4">
+      <PersonCard
+        name="Narin Fazlalipour"
+        text="Student Speaker"
+        img="/event-img/2023/winter-salon/narin-fazlalipour.jpg"
+        link="https://www.youtube.com/watch?v=example"
+      />
+      <PersonCard
+        name="Arlene Nagtalon"
+        text="Student Speaker"
+        img="/event-img/2023/winter-salon/arlene-nagtalon.jpg"
+        link="https://www.youtube.com/watch?v=example"
+      />
+      <PersonCard
+        name="Ishika Rathi"
+        text="Student Speaker"
+        img="/event-img/2023/winter-salon/ishika-rathi.jpg"
+        link="https://www.youtube.com/watch?v=example"
+      />
+      <PersonCard
+        name="Charles Vu"
+        text="Student Speaker"
+        img="/event-img/2023/winter-salon/charles-vu.jpg"
+        link="https://www.youtube.com/watch?v=example"
+      />
+    </div>
+  </div>
+
+  <input class='tabs-radio' type='radio' name='salon-speakers' id='salon-2021' />
+  <label class='tabs-label' for='salon-2021'>2021</label>
+  <div class='tabs-content'>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 w-full gap-4">
+      <PersonCard
+        name="Nathan Bradshaw"
+        text="Student Speaker"
+        img="/event-img/2021/winter-salon/nathan-bradshaw.jpg"
+        link="https://www.youtube.com/watch?v=example"
+      />
+      <PersonCard
+        name="Grace Ferber"
+        text="Student Speaker"
+        img="/event-img/2021/winter-salon/grace-ferber.jpg"
+        link="https://www.youtube.com/watch?v=example"
+      />
+      <PersonCard
+        name="Krishiv Vora"
+        text="Student Speaker"
+        img="/event-img/2021/winter-salon/krishiv-vora.jpg"
+        link="https://www.youtube.com/watch?v=example"
+      />
+    </div>
+  </div>
+</div>
+
+<style>
+	.tabs {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.tabs-label {
+		padding-inline: 8px;
+		cursor: pointer;
+		color: gray;
+	}
+
+	.tabs-label:hover {
+		background-color: #f5f5f5;
+		border-bottom: 2px solid #eb002739;
+	}
+
+	.tabs-radio {
+		display: none;
+	}
+
+	.tabs-radio:checked + .tabs-label {
+		font-weight: bold;
+		color: black;
+		border-bottom: 2px solid #eb0028;
+	}
+
+	.tabs-radio:checked + .tabs-label + .tabs-content {
+		display: block;
+	}
+
+	.tabs-content {
+		order: 1;
+		width: 100%;
+		display: none;
+		padding-top: 1rem;
+	}
+</style>
