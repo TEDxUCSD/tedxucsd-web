@@ -3,56 +3,89 @@ import MainConference from "./MainConference.astro";
 import Salon from "./Salon.astro";
 ---
 
-<div class="sub-tabs">
-  <input class="tabs-radio" type="radio" name="top-tab" id="main" checked>
-  <label class="tabs-label" for="main">Main Conference</label>
-  <div class="tabs-content">
-    <MainConference />
+<div class="tabs-wrapper" id="speaker-tabs">
+  <div class="sidebar">
+    <button class="tabs-label active" data-tab="main">Main Conference</button>
+    <button class="tabs-label" data-tab="salon">Salon</button>
   </div>
 
-  <input class="tabs-radio" type="radio" name="top-tab" id="salon">
-  <label class="tabs-label" for="salon">Salon</label>
-  <div class="tabs-content">
-    <Salon />
+  <div class="tabs-panel">
+    <div class="tabs-content" data-content="main">
+      <MainConference />
+    </div>
+    <div class="tabs-content hidden" data-content="salon">
+      <Salon />
+    </div>
   </div>
 </div>
 
+<!-- WORKING JS -->
+<script is:client>
+  const tabWrapper = document.getElementById('speaker-tabs');
+  const tabButtons = tabWrapper.querySelectorAll('[data-tab]');
+  const tabContents = tabWrapper.querySelectorAll('[data-content]');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tab = button.getAttribute('data-tab');
+
+      // Toggle active button
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // Toggle visible content
+      tabContents.forEach(content => {
+        content.classList.toggle('hidden', content.getAttribute('data-content') !== tab);
+      });
+    });
+  });
+</script>
+
 <style>
-  .sub-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-  }
+.tabs-wrapper {
+  display: flex;
+  gap: 2rem;
+}
 
-  .tabs-label {
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    color: gray;
-  }
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 180px;
+  padding-top: 1rem;
+  border-right: 1px solid #e5e7eb;
+}
 
-  .tabs-label:hover {
-    background-color: #f5f5f5;
-    border-bottom: 2px solid #eb002739;
-  }
+.tabs-label {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: #6b7280;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 0.375rem;
+  background: none;
+  border: none;
+  text-align: left;
+}
 
-  .tabs-radio {
-    display: none;
-  }
+.tabs-label:hover {
+  background-color: #f3f4f6;
+}
 
-  .tabs-radio:checked + .tabs-label {
-    font-weight: bold;
-    color: black;
-    border-bottom: 2px solid #eb0028;
-  }
+.tabs-label.active {
+  font-weight: 600;
+  color: #111827;
+  background-color: #ffffff;
+  border-left: 4px solid #eb0028;
+  border-radius: 0.375rem 0 0 0.375rem;
+}
 
-  .tabs-radio:checked + .tabs-label + .tabs-content {
-    display: block;
-  }
+.tabs-panel {
+  flex: 1;
+  padding-top: 1rem;
+}
 
-  .tabs-content {
-    order: 1;
-    width: 100%;
-    display: none;
-    padding-top: 1rem;
-  }
+.tabs-content.hidden {
+  display: none;
+}
 </style>
