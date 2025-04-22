@@ -1,0 +1,58 @@
+---
+import MainConference from "./MainConference.astro";
+import Salon from "./Salon.astro";
+---
+
+<div class="sub-tabs">
+  <input class="tabs-radio" type="radio" name="top-tab" id="main" checked>
+  <label class="tabs-label" for="main">Main Conference</label>
+  <div class="tabs-content">
+    <MainConference />
+  </div>
+
+  <input class="tabs-radio" type="radio" name="top-tab" id="salon">
+  <label class="tabs-label" for="salon">Salon</label>
+  <div class="tabs-content">
+    <Salon />
+  </div>
+</div>
+
+<style>
+  .sub-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .tabs-label {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: gray;
+  }
+
+  .tabs-label:hover {
+    background-color: #f5f5f5;
+    border-bottom: 2px solid #eb002739;
+  }
+
+  .tabs-radio {
+    display: none;
+  }
+
+  .tabs-radio:checked + .tabs-label {
+    font-weight: bold;
+    color: black;
+    border-bottom: 2px solid #eb0028;
+  }
+
+  .tabs-radio:checked + .tabs-label + .tabs-content {
+    display: block;
+  }
+
+  .tabs-content {
+    order: 1;
+    width: 100%;
+    display: none;
+    padding-top: 1rem;
+  }
+</style>
