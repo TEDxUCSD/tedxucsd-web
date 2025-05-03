@@ -16,20 +16,49 @@ import Countdown from "../components/Countdown.astro";
 				alt='TEDxUCSD Speaker Banner'
 		/>
 		<section class='bg-white py-8 px-6 w-full'>
-			<div class='md:max-w-5xl m-auto text-center'>
-				<h2 class='text-2xl font-medium text-gray-500 italic'>
+			<div class='md:max-w-5xl m-auto text-center mb-6'>
+				<h2 class='text-4xl font-medium text-gray-500 italic'>
 					TEDxUCSanDiego Presents:
 				</h2>
-				<h1 class='text-4xl font-semibold text-ted-red mb-0'>IMITATION</h1>
+				<!-- <h1 class='text-4xl font-semibold text-ted-red mb-0'>IMITATION</h1> -->
+			</div>
+			<div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-4">
+				<img
+					class="object-contain w-[90%] max-w-sm md:max-w-md lg:max-w-lg"
+					src="/event-img/2025/imitation.png"
+					alt="MC theme"
+				/>
+			</div>
+			<Countdown />
+		</section>
+		<section class='bg-black py-1'>
+			<div class='md:max-w-5xl m-auto text-center mb-6'>
+				<h1 class='text-4xl font-semibold text-white mt-6'>Introducing IMITATION</h1>
+			</div>
+			<div class="mt-8 mb-12 text-white text-xl space-y-2 text-center mx-auto w-fit">
+				<p>📅 <span class="font-semibold italic">DATE:</span> Saturday, May 17</p>
+				<p>🕒 <span class="font-semibold italic">TIME:</span> 3:00 PM – 7:00 PM</p>
+				<p>📍 <span class="font-semibold italic">LOCATION:</span> Price Center Theater, San Diego, California</p>
+			</div>			  
+			<div class="flex justify-center gap-14 pb-6">
+				<a 
+					href="https://lu.ma/03sbzbl3" 
+					target="_blank" 
+					rel="noopener noreferrer" 
+					class="bg-ted-red text-white px-6 py-3 rounded-md font-semibold hover:bg-red-700 transition-all shadow-md"
+				>
+					Register
+				</a>
+			</div>
+			<div class="mt-6 max-w-4xl mx-auto px-4 text-white mb-8">
+				<p class="text-base md:text-lg leading-relaxed">
+				<strong>“Imitation”</strong> is the act of reshaping existing characteristics into something new. It is behavior, art, invention, and culture that strives to resemble the original. It invites us to reflect on how our surroundings shape identity, and when imitation becomes a tool for understanding—or a call for distinction. 
+				From childhood learning to social mimicry, imitation is foundational to how we grow and connect. It can amplify, critique, or transform what it reflects, whether through parody, mirroring, or subtle resemblance—its power lies in perception.
+				Does art imitate life, or life imitate art? This age-old question speaks to the cyclical nature of creation. Imitation offers a lens into this loop, challenging us to consider what’s borrowed, what’s new, and what it all means.
+				</p>
 			</div>
 		</section>
-		<img
-			class='object-contain w-[90%] h-[50vh] max-w-sm md:max-w-md lg:max-w-lg m-auto mb-4'
-			src='/imitation.png'
-			alt='MC theme'
-		/>
-		<Countdown />
-		<section class='bg-black text-white py-12'>
+		<section class='bg-white text-black py-12'>
 			<div class='m-auto text-center max-w-full md:max-w-5xl mb-14'>
 				<h1 id="whatIsTedx" class="text-6xl font-semibold mb-4 opacity-0 translate-y-6 transition-all duration-[1100ms]">
 					What is <a href="https://www.ted.com/tedx" class='text-ted-red underline' target="_blank" rel="noopener noreferrer">TEDx</a>?
@@ -45,8 +74,8 @@ import Countdown from "../components/Countdown.astro";
 				</p>
 			</div>
 			<img
-				class='object-contain w-[90%] h-[50vh] max-w-sm md:max-w-md lg:max-w-lg m-auto mb-4 rounded-2xl shadow-lg transition-transform duration-300 ease-out hover:scale-105'
-				src='/tedx-bear.png'
+				class='object-contain w-[90%] h-[50vh] max-w-sm md:max-w-md lg:max-w-lg m-auto mb-4 rounded-2xl'
+				src='/event-img/2025/tedx-bear.png'
 				alt='tedx bear'
 			/>
 		</section>			
