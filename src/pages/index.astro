@@ -16,23 +16,51 @@ import Countdown from "../components/Countdown.astro";
 				alt='TEDxUCSD Speaker Banner'
 		/>
 		<section class='bg-white py-8 px-6 w-full'>
-			<div class='md:max-w-5xl m-auto text-center'>
-				<!-- <h2 class='text-2xl font-medium text-gray-500 italic'>
+			<div class='md:max-w-5xl m-auto text-center mb-6'>
+				<h2 class='text-4xl font-medium text-gray-500 italic'>
 					TEDxUCSanDiego Presents:
-				</h2> -->
-				<h1 class='text-4xl font-semibold text-ted-red mb-0'>2025 Theme Reveal Soon!</h1>
-				<!-- <h3 class='text-gray-600 mb-8'>More to come soon!</h3> -->
+				</h2>
+				<!-- <h1 class='text-4xl font-semibold text-ted-red mb-0'>IMITATION</h1> -->
+			</div>
+			<div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-4">
+				<img
+					class="object-contain w-[90%] max-w-sm md:max-w-md lg:max-w-lg"
+					src="/event-img/2025/imitation.png"
+					alt="MC theme"
+				/>
+			</div>
+			<Countdown />
+		</section>
+		<section class='bg-gray-700 py-1'>
+			<div class='md:max-w-5xl m-auto text-center mb-6'>
+				<h1 class='text-4xl font-semibold text-white mt-6'>Introducing IMITATION</h1>
+			</div>
+			<div class="mt-8 mb-12 text-white text-xl space-y-2 text-center mx-auto w-fit">
+				<p>📅 <span class="font-semibold italic">DATE:</span> Saturday, May 17</p>
+				<p>🕒 <span class="font-semibold italic">TIME:</span> 3:00 PM – 7:00 PM</p>
+				<p>📍 <span class="font-semibold italic">LOCATION:</span> Price Center Theater, San Diego, California</p>
+			</div>			  
+			<div class="flex justify-center gap-14 pb-6">
+				<a 
+					href="https://lu.ma/03sbzbl3" 
+					target="_blank" 
+					rel="noopener noreferrer" 
+					class="bg-ted-red text-white px-6 py-3 rounded-md font-semibold hover:bg-red-700 transition-all shadow-md"
+				>
+					Register
+				</a>
+			</div>
+			<div class="mt-6 max-w-4xl mx-auto px-4 text-white mb-8">
+				<p class="text-base md:text-lg leading-relaxed">
+				<strong>“Imitation”</strong> is the act of reshaping existing characteristics into something new. It is behavior, art, invention, and culture that strives to resemble the original. It invites us to reflect on how our surroundings shape identity, and when imitation becomes a tool for understanding—or a call for distinction. 
+				From childhood learning to social mimicry, imitation is foundational to how we grow and connect. It can amplify, critique, or transform what it reflects, whether through parody, mirroring, or subtle resemblance—its power lies in perception.
+				Does art imitate life, or life imitate art? This age-old question speaks to the cyclical nature of creation. Imitation offers a lens into this loop, challenging us to consider what’s borrowed, what’s new, and what it all means.
+				</p>
 			</div>
 		</section>
-		<img
-				class='object-contain w-[90%] h-[50vh] max-w-sm md:max-w-md lg:max-w-lg m-auto mb-4'
-				src='/tedx-bear.png'
-				alt='tedx bear'
-		/>
-		<Countdown />
-		<section class='bg-black text-white py-12'>
-			<div class='m-auto text-center max-w-full md:max-w-5xl mb-14'>
-				<h1 id="whatIsTedx" class="text-6xl font-semibold mb-4 opacity-0 translate-y-6 transition-all duration-[1100ms]">
+		<section class='bg-white text-black py-12'>
+			<div class='m-auto text-center max-w-full md:max-w-4xl mb-10'>
+				<h1 id="whatIsTedx" class="text-6xl font-semibold mb-12 opacity-0 translate-y-6 transition-all duration-[1100ms]">
 					What is <a href="https://www.ted.com/tedx" class='text-ted-red underline' target="_blank" rel="noopener noreferrer">TEDx</a>?
 				</h1>
 				<p class='text-lg mb-8'>
@@ -45,23 +73,11 @@ import Countdown from "../components/Countdown.astro";
 					ours, are self-organized.
 				</p>
 			</div>
-			<div class='md:max-w-5xl m-auto text-center'>
-				<h1 class='text-2xl mb-4 text-center'>Salon 3: Waiting Room</h1>
-				<p class="mb-3" style="font-style: italic;">A theme centered around anticipation, waiting for something, uncertainty, and the state of transition.</p>
-				<p class="mb-5">
-					Date: Monday, April 14<br>
-					Time: 5:30 PM - 8:00 PM<br>
-					Location: <a href="https://www.google.com/maps/place/Stage+Room+UC+San+Diego/@32.8770966,-117.2394018,16z/data=!3m1!4b1!4m6!3m5!1s0x80dc06c68336a3d9:0x5ab98c041ef448c!8m2!3d32.8770966!4d-117.2394018!16s%2Fg%2F11gg9mjtf2?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D" 
-									style="text-decoration: underline;">Stage Room UC San Diego</a>
-				</p>
-				<!-- <img src="/salon2.png" alt="salon 2" style="display: block; margin: auto"><br> -->
-				<!-- <div>
-					<p class='py-8 text-gray-700'>
-						description
-					</p>
-					<a class='bg-ted-red text-white p-3 mt-8 inline-block' href='https://lu.ma/wkloh6e6'>Tickets</a>
-				</div> -->
-			</div>
+			<img
+				class='object-contain w-[90%] h-[50vh] max-w-sm md:max-w-md lg:max-w-lg m-auto mb-4 rounded-2xl'
+				src='/event-img/2025/tedx-bear.png'
+				alt='tedx bear'
+			/>
 		</section>			
 		<!-- <div class="text-center">
 			<div class="flex justify-center">
