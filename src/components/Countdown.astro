@@ -31,6 +31,40 @@ const targetDate = new Date('2025-05-17T15:00:00'); // Optional if needed elsewh
 </script>
 
 <div class="text-center mt-6 mb-1">
-  <span id="countdown" class="text-6xl font-mono text-black font-bold">Loading...</span>
-  <span class="block text-3xl font-medium text-ted-red mb-1">until Main Conference!</span>
+  <span id="countdown" class="text-3xl sm:text-4xl md:text-5xl font-mono text-black font-bold">Loading...</span>
 </div>
+
+
+<!-- ---
+// Countdown.astro
+const targetDate = new Date('2025-05-17T15:00:00');
+---
+
+<span id="countdown" class="text-xl md:text-3xl font-mono font-bold">Loading...</span>
+
+<script type="module" client:load>
+  const target = new Date("2025-05-17T15:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = target - now;
+
+    const countdownEl = document.getElementById("countdown");
+    if (!countdownEl) return;
+
+    if (distance < 0) {
+      countdownEl.innerHTML = "Event has started!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script> -->

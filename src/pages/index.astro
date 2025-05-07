@@ -13,19 +13,29 @@ import Countdown from "../components/Countdown.astro";
 		<hr class="border-t-[14px] border-ted-red" />
 		<section class='bg-white py-8 px-6 w-full'>
 			<div class='md:max-w-5xl m-auto text-center mb-6'>
-				<h2 class='text-4xl font-medium text-gray-500 italic'>
+				<h2 class='text-3xl sm:text-4xl md:text-5xl font-medium text-gray-500 italic'>
 					TEDxUCSanDiego Presents:
 				</h2>
-				<!-- <h1 class='text-4xl font-semibold text-ted-red mb-0'>IMITATION</h1> -->
 			</div>
-			<div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-4">
+			<Countdown />
+			<div class='flex flex-col md:flex-row justify-center items-center gap-6 mb-4'>
 				<img
-					class="object-contain w-[90%] max-w-sm md:max-w-md lg:max-w-lg"
-					src="/event-img/2025/imitation.png"
+					class='overflow-clip object-cover w-full h-full'
+					src="/event-img/2025/imitation-intro.png"
 					alt="MC theme"
 				/>
 			</div>
-			<Countdown />
+		
+			<!-- <div class="relative w-full max-w-5xl mx-auto mb-4">
+				<img
+				  class="object-cover w-full h-full rounded-md"
+				  src="/event-img/2025/imitation-intro.png"
+				  alt="MC theme"
+				/>
+				<div class="absolute top-[20%] left-[12%] ml-[12%] transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-0 text-black text-xl md:text-3xl px-4 py-2 z-10">
+				  <Countdown />
+				</div>
+			</div>						 -->
 		</section>
 		<section class='bg-gray-700 py-1'>
 			<div class='md:max-w-5xl m-auto text-center mb-6'>
