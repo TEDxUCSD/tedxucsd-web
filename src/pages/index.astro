@@ -10,34 +10,89 @@ import Countdown from "../components/Countdown.astro";
 <Layout title='Home'>
 	<main class=''>
 		<div class='w-full'>
-		<hr class="border-t-[14px] border-ted-red" />
-		<section class='bg-white py-8 px-6 w-full'>
-			<div class='md:max-w-5xl m-auto text-center mb-6'>
-				<h2 class='text-3xl sm:text-4xl md:text-5xl font-medium text-gray-500 italic'>
-					TEDxUCSanDiego Presents:
+		<hr class="border-t-[10px] border-ted-red" />
+		<section class='bg-white pt-8 pb-0 px-6 w-full'>
+			<div class="w-full max-w-xs sm:max-w-md md:max-w-3xl lg:max-w-5xl mx-auto text-center mb-6 px-4">
+				<h2 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-gray-500 italic leading-tight">
+				  TEDxUCSanDiego Presents:
 				</h2>
 			</div>
 			<Countdown />
-			<div class='flex flex-col md:flex-row justify-center items-center gap-6 mb-4'>
-				<img
-					class='overflow-clip object-cover w-full h-full'
+			  <div class='flex flex-col md:flex-row justify-center items-center gap-6 mb-4'>
+				<div class="relative w-full">
+				  <img
+					class="overflow-clip object-cover w-full h-full"
 					src="/event-img/2025/imitation-intro.png"
 					alt="MC theme"
+				  />
+				  <a 
+					href="https://lu.ma/03sbzbl3" 
+					target="_blank" 
+					rel="noopener noreferrer" 
+					class="absolute z-10 text-[clamp(0.75rem,2.5vw,1.125rem)] px-[clamp(0.75rem,3vw,1.5rem)] py-[clamp(0.4rem,1.5vw,0.75rem)] bg-ted-red text-white font-semibold rounded-md hover:bg-red-700 transition-all shadow-md"
+					style="bottom: 20%; left: 10%;"
+				  >
+					Register
+				  </a>
+				</div>
+			  </div>
+		</section>
+		
+		<div class="w-full bg-gray-400 px-4 sm:px-6 md:px-10">
+			<div class="h-[80px] sm:h-[100px] md:h-[115px] flex items-center justify-start text-black text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">
+			  WHAT DOES 'IMITATION' MEAN?
+			</div>
+		</div>
+		  
+		<div class="relative bg-white w-full px-6 py-8 flex flex-col md:flex-row items-center gap-6">
+			<div class="w-[10%] flex justify-center">
+				<img 
+				src="/event-img/2025/imitation-left.png" 
+				alt="Imitation graphic" 
+				class="w-full max-w-xs md:max-w-sm object-contain"
 				/>
 			</div>
-		
-			<!-- <div class="relative w-full max-w-5xl mx-auto mb-4">
-				<img
-				  class="object-cover w-full h-full rounded-md"
-				  src="/event-img/2025/imitation-intro.png"
-				  alt="MC theme"
+			<div class="w-[70%] text-gray-800 text-lg sm:text-base space-y-4">
+				<p>
+					“Imitation” is the act of existing characteristics taking a different form to produce something new. 
+					It is behavior, art, invention, and culture that strives to appear as the original once did.
+				</p>
+			  	<p>
+					Imitation invites us to examine how the people, environments, and behaviors we interact with reveal 
+					or induce shared identity and beliefs. On one hand, it is a foundational component of development, from 
+					learning a language to developing social cues to using mimicry for survival. Similarly, it calls for a 
+					thoughtful contemplation on what might require distinction. Imitation has the potential to not only express, 
+					but magnify, critique, and inspire transformations. Whether imitation takes the form of parody, distorted 
+					mirroring, or uncanny similarities, it depends on the power of perception.
+				</p>
+			  	<p>
+					Does art imitate life or does life imitate art? It's a question that's been asked for centuries, but a 
+					question that nonetheless fails to provide an answer. If art is anything that is created from the experience 
+					of life, how does life play a role in its creation? Imitation allows us to consider the bidirectional 
+					relationships that emerge amidst cycles of copy and paste.
+			  	</p>
+				<p>
+					We believe imitation has the capacity to both extract from and build on the opportunities that are present in 
+					that which is imitated. Perhaps imitation can provide insight into the future, and perhaps it can be a disservice 
+					to the authenticity of the original. To what extent does imitation hinder, and to what extent does it create?
+				</p>
+			</div>
+			<div class="w-[20%] flex justify-center">
+				<img 
+				src="/event-img/2025/imitation-right.png" 
+				alt="Imitation graphic" 
+				class="w-full max-w-xs md:max-w-sm object-contain"
 				/>
-				<div class="absolute top-[20%] left-[12%] ml-[12%] transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-0 text-black text-xl md:text-3xl px-4 py-2 z-10">
-				  <Countdown />
-				</div>
-			</div>						 -->
-		</section>
-		<section class='bg-gray-700 py-1'>
+			</div>
+		</div>
+		  
+		<div class="w-full bg-gray-400 px-4 sm:px-6 md:px-10">
+			<div class="h-[80px] sm:h-[100px] md:h-[115px] flex items-center justify-start text-black text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">
+			  MAIN CONFERENCE 2025 INDUSTRY SPEAKERS
+			</div>
+		</div>
+		  
+		<!-- <section class='bg-gray-700 py-1'>
 			<div class='md:max-w-5xl m-auto text-center mb-6'>
 				<h1 class='text-4xl font-semibold text-white mt-6'>Introducing IMITATION</h1>
 			</div>
@@ -63,15 +118,242 @@ import Countdown from "../components/Countdown.astro";
 				Does art imitate life, or life imitate art? This age-old question speaks to the cyclical nature of creation. Imitation offers a lens into this loop, challenging us to consider what’s borrowed, what’s new, and what it all means.
 				</p>
 			</div>
-		</section>
+		</section> -->
 
-		<img
+		<section class="bg-[#dc8477] py-20 px-6">
+			<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
+			  
+				<div class="w-full md:w-1/2 flex justify-start md:pl-6">
+					<img 
+					  src="/event-img/2025/speakers/jeannine-coulter.png" 
+					  alt="Jeannine Coulter headshot" 
+					  class="w-[100%] sm:w-[90%] md:w-[80%] lg:w-[70%] max-w-[320px] object-cover"
+					/>
+				  </div>
+				
+				  <div class="w-full md:w-[70%] text-white text-left flex flex-col justify-center">
+					<h2 class="text-3xl sm:text-4xl font-bold text-black flex items-center gap-3">
+					  Jeannine Coulter
+					  <a href="https://www.instagram.com/jeanninecoulter/" target="_blank" class="inline-block">
+						<svg
+						  xmlns="http://www.w3.org/2000/svg"
+						  viewBox="0 0 56.7 56.7"
+						  class="w-10 h-10 text-black fill-current hover:text-ted-red transition-colors"
+						>
+						  <g>
+							<path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+							c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"></path>
+							<circle cx="41.5" cy="16.4" r="2.9"></circle>
+							<path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+							h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+							s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+							c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"></path>
+						  </g>
+						</svg>
+					  </a>
+					  
+					</h2>
+					<h3 class="text-xl sm:text-2xl font-medium text-black mt-1 mb-4">
+					  Leveraging Our Agency of Thought to Enhance the Quality Our Lives
+					</h3>
+					<p class="text-black text-sm sm:text-base leading-relaxed">
+					  Jeannine Coulter is a podcaster, public speaker, content creator and fitness professional.
+					  Jeannine was an active drug addict and alcoholic for 15 years – her using led to multiple arrests, homelessness,
+					  and the loss of absolutely everything – which she considers to be the best thing that ever happened to her.
+					  Sober since January 15, 2015, Jeannine is committed to sharing her story in the hopes that it may help guide and inspire
+					  others seeking a path of recovery and healing. After selling her fitness studio in 2022, Jeannine continues to teach her
+					  favorite fitness modality, indoor cycling, weaving her personal story into her classes as motivation for her clients.
+					  She currently resides in San Diego with her husband, Scuyler, and their pug, Tank.
+					</p>
+				  </div>
+			</div>
+		  </section>
+		  
+		  <section class="bg-[#9fcea9] py-20 px-6">
+			<div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center gap-10">			  
+			  <div class="w-full md:w-[70%] text-white text-left flex flex-col justify-center">
+				<h2 class="text-3xl sm:text-4xl font-bold text-black flex items-center gap-3">
+				  Julie McNutt
+				</h2>
+		  
+				<h3 class="text-xl sm:text-2xl font-medium text-black mt-1 mb-4">
+				  Acknowledging the value of scientists' and non-scientists' POV
+				</h3>
+		  
+				<p class="text-black text-sm sm:text-base leading-relaxed">
+				  Julie received her PhD in chemistry at the University of British Columbia where she studied hormones involved in the 
+				  growth of breast cancer. During her PhD, she developed an interest in science education. This led to her current role 
+				  as a postdoctoral scholar at the University of California San Diego. In this position, Julie uses her chemistry knowledge 
+				  and research methods from social sciences to study teaching and learning. Presently, she is researching how STEM instructors 
+				  interpret data about their teaching and how this impacts their teaching practices.  
+				</p>
+		  
+				<br>
+		  
+				<p class="text-black text-sm sm:text-base leading-relaxed">
+				  Julie is also passionate about science communication and how it can be improved within and outside of academia. Previously, she was 
+				  an organizer and advisory board member of the organization ComSciConCAN which trains graduate students to become effective science 
+				  communicators. Ultimately, Julie is interested in how the skills of an effective STEM educator may be used to improve the communication 
+				  of scientific ideas to the public.
+				</p>
+			  </div>
+		  
+			  <div class="w-full md:w-1/2 flex justify-end md:pr-6">
+				<img 
+				  src="/event-img/2025/speakers/julie-mcnutt.png" 
+				  alt="Julie McNutt headshot" 
+				  class="w-[100%] sm:w-[90%] md:w-[80%] lg:w-[70%] max-w-[320px] object-cover"
+				/>
+			  </div>
+		  
+			</div>
+		  </section>
+
+		  <section class="bg-[#92c9b8] py-20 px-6">
+			<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
+			  
+				<div class="w-full md:w-1/2 flex justify-start md:pl-6">
+					<img 
+					  src="/event-img/2025/speakers/john-wixted.png" 
+					  alt="John Wixted headshot" 
+					  class="w-[100%] sm:w-[90%] md:w-[80%] lg:w-[70%] max-w-[320px] object-cover"
+					/>
+				  </div>
+				
+				  <div class="w-full md:w-[70%] text-white text-left flex flex-col justify-center">
+					<h2 class="text-3xl sm:text-4xl font-bold text-black flex items-center gap-3">
+						John Wixted					  
+					</h2>
+					<h3 class="text-xl sm:text-2xl font-medium text-black mt-1 mb-4">
+						When Eyewitness Memory Reliably Exonerates the Wrongfully Convicted
+					</h3>
+					<p class="text-black text-sm sm:text-base leading-relaxed">
+						John Wixted is a Distinguished Professor in the Department of Psychology at UC San Diego. He earned his Ph.D. in clinical psychology from 
+						Emory University in 1987 and has been a professor at UC San Diego ever since. His research addresses fundamental mechanisms of human memory, 
+						both in the lab and in the real world. In recent years, his work has focused on signal-detection models of recognition memory, the 
+						neuroscience of memory and amnesia, and eyewitness identification. Professionally, he has served as editor-in-chief of Psychonomic Bulletin 
+						& Review (1998-2002), and he later edited the 5-volume 4th edition of the venerable Stevens' Handbook of Experimental Psychology and Cognitive 
+						Neuroscience (2018). In 2011, he was the recipient of the Howard Crosby Warren Medal for distinction in contemporary research in experimental 
+						psychology, and in 2019 he was elected to the American Academy of Arts and Sciences.
+					</p>
+				  </div>
+			</div>
+		  </section>
+		  <section class="bg-[#cbbfa7] py-20 px-6">
+			<div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center gap-10">
+		  
+			  <div class="w-full md:w-[70%] text-white text-left flex flex-col justify-center">
+				<h2 class="text-3xl sm:text-4xl font-bold text-black flex items-center gap-3">
+				  Chris Villain
+				  <a href="https://www.instagram.com/chrisvillain/?hl=en" target="_blank" class="inline-block">
+					<svg
+					  xmlns="http://www.w3.org/2000/svg"
+					  viewBox="0 0 56.7 56.7"
+					  class="w-10 h-10 text-black fill-current hover:text-ted-red transition-colors"
+					>
+					  <g>
+						<path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+						  c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"></path>
+						<circle cx="41.5" cy="16.4" r="2.9"></circle>
+						<path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+						  h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+						  s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+						  c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"></path>
+					  </g>
+					</svg>
+				  </a>
+				</h2>
+		  
+				<h3 class="text-xl sm:text-2xl font-medium text-black mt-1 mb-4">
+				  Learn the Mindset of a Cosplayer & how to apply it to your own life!
+				</h3>
+		  
+				<p class="text-black text-sm sm:text-base leading-relaxed">
+				  Chris Villain is an Award winning Entertainment Jack of all Trades that has directed, written, produced, acted in, and collaborated on 
+				  projects with Disney, Disney Channel, Comedy Central, Geico, Warner Brothers, Universal Pictures and more! You can also find Chris online, 
+				  where his social media presence has grabbed the attention of entertainment hubs across the country such as The Huffington Post, Logo TV, Broadway 
+				  World, along with others! His viral singing and nerd culture videos have raked in millions of views; now boasting well over 500,000 followers 
+				  across his social media platforms! Chris has also had the privilege to perform in National Touring productions like Mamma Mia and Dora the Explorer 
+				  Live!  
+				</p>
+		  
+				<br>
+		  
+				<p class="text-black text-sm sm:text-base leading-relaxed">
+				  Having done commercials for leading names in the industry such as Google, McDonalds, Warner Brothers, Chevrolet, Toyota, and the NBA, Chris still 
+				  gets the most joy out of making people smile through his content and imagination!
+				</p>
+			  </div>
+		  
+			  <div class="w-full md:w-1/2 flex justify-end md:pr-6">
+				<img 
+				  src="/event-img/2025/speakers/chris-villain.png" 
+				  alt="Chris Villain headshot" 
+				  class="w-[100%] sm:w-[90%] md:w-[80%] lg:w-[70%] max-w-[320px] object-cover"
+				/>
+			  </div>
+			</div>
+		  </section>
+		  
+
+		  <img
 		class='overflow-clip object-cover w-full h-full'
 		src='/banners/tedx-landing-page-banner.png'
 		alt='TEDxUCSanDiego Speaker Banner'
 		/>
 
-		<section class='bg-white text-black py-12'>
+		<section class="bg-ted-red py-20 px-6 text-white">
+			<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-center gap-10">
+				<div class="w-full md:w-1/2 flex justify-center md:justify-start">
+					<h1 class="text-4xl sm:text-5xl font-extrabold drop-shadow-md whitespace-nowrap">
+						TEDxUCSanDiego
+					</h1>
+				</div>
+				<div class="w-full md:w-1/2 text-center md:text-left">
+					<p class="text-sm sm:text-base md:text-lg leading-relaxed">
+						TEDxUCSanDiego's mission is to bring together leading thinkers and doers to share ideas that matter
+						in and to any discipline - technology, entertainment, design, science, humanities, business,
+						development, and much more. Through a local forum, we hope to inspire people to change their lives,
+						their futures, and ultimately their world.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-white py-20">
+			<div class="max-w-6xl mx-auto px-6 text-black space-y-6">
+			  
+			  <!-- Heading -->
+			  <h2 class="text-3xl sm:text-4xl font-extrabold">
+				The ‘x’ in TEDxUCSanDiego
+			  </h2>
+		  
+			  <!-- Paragraph -->
+			  <p class="text-base sm:text-lg leading-relaxed">
+				In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring
+				people together to share a TED-like experience. Our event is called TEDxUCSanDiego, where x = independently organized TED event. At our TEDxUCSanDiego
+				event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general
+				guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.
+			  </p>
+		  
+			  <!-- Link -->
+			  <p class="text-base sm:text-lg">
+				Check out 
+				<a 
+				  href="https://www.ted.com/about/programs-initiatives/tedx-program" 
+				  target="_blank" 
+				  class="italic underline hover:text-ted-red transition-colors"
+				>
+				  https://www.ted.com/about/programs-initiatives/tedx-program
+				</a> 
+				to learn more!
+			  </p>
+		  
+			</div>
+		  </section>
+		  
+
+		<!-- <section class='bg-white text-black py-12'>
 			<div class='m-auto text-center max-w-full md:max-w-4xl mb-10'>
 				<h1 id="whatIsTedx" class="text-6xl font-semibold mb-12 opacity-0 translate-y-6 transition-all duration-[1100ms]">
 					What is <a href="https://www.ted.com/tedx" class='text-ted-red underline' target="_blank" rel="noopener noreferrer">TEDx</a>?
@@ -91,7 +373,7 @@ import Countdown from "../components/Countdown.astro";
 				src='/event-img/2025/tedx-bear.png'
 				alt='tedx bear'
 			/>
-		</section>			
+		</section>			 -->
 		<!-- <div class="text-center">
 			<div class="flex justify-center">
 				<div class="bg-gray-100 border-2 border-gray rounded-md inline-block p-6" style="max-width: 800px; margin: auto; margin-right: 20px; margin-bottom: 40px;">
