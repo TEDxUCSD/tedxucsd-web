@@ -30,7 +30,16 @@ const targetDate = new Date('2025-05-17T15:00:00'); // Optional if needed elsewh
   updateCountdown();
 </script>
 
+<!-- <div class="text-center mt-6 mb-1">
+  <span id="countdown" class="text-3xl sm:text-4xl md:text-5xl font-mono text-black font-bold">Loading...</span>
+</div> -->
+
 <div class="text-center mt-6 mb-1">
-  <span id="countdown" class="text-6xl font-mono text-black font-bold">Loading...</span>
-  <span class="block text-3xl font-medium text-ted-red mb-1">until Main Conference!</span>
+  <span
+    id="countdown"
+    class="font-mono font-bold text-black"
+    style="font-size: clamp(1.25rem, 5vw, 3rem);"
+  >
+    Loading...
+  </span>
 </div>

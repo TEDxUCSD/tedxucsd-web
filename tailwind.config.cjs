@@ -3,6 +3,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
 	content: ["./src/**/*.astro"],
+	mode: 'jit',
 	theme: {
 		extend: {
 			colors: {
@@ -35,7 +36,10 @@ module.exports = {
 			  animation: {
 				'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
 			  },
-			  mode: 'jit',
+			  maxWidth: {
+				'8xl': '88rem',
+				'9xl': '96rem',
+			  },
 		},
 	},
 	plugins: [],
